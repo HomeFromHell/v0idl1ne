@@ -1053,6 +1053,7 @@ footer {
       <button class="nav-tag" onclick="filter('home',this)">HOME</button>
       <button class="nav-tag" onclick="filter('finance',this)">FINANCE</button>
       <button class="nav-tag" onclick="filter('survival',this)">SURVIVAL</button>
+      <button class="nav-tag" onclick="filter('digital',this)">DIGITAL</button>
     </div>
   </nav>
 
@@ -1184,13 +1185,14 @@ footer {
           <button onclick="filter('home',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">HOME</button>
           <button onclick="filter('finance',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">FINANCE</button>
           <button onclick="filter('survival',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">SURVIVAL</button>
+          <button onclick="filter('digital',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">DIGITAL</button>
         </div>
       </div>
       <div>
         <div class="footer-col-label">// the record</div>
         <div class="footer-meta">
-          <div class="footer-meta-item">ENTRIES PUBLISHED<span>6 and counting</span></div>
-          <div class="footer-meta-item">LAST UPDATED<span>2025.04.06</span></div>
+          <div class="footer-meta-item">ENTRIES PUBLISHED<span>8 and counting</span></div>
+          <div class="footer-meta-item">LAST UPDATED<span>2026.04.11</span></div>
           <div class="footer-meta-item">RIGHTS<span>None reserved. Copy freely.</span></div>
           <div class="footer-meta-item">CORRECTIONS<span>Submit via entry form</span></div>
         </div>
@@ -1279,6 +1281,33 @@ const posts = [
       <h2>What To Do</h2>
       <p>Don't thrash — it accelerates heat loss. Don't swim aggressively unless shore is within 30–50 yards. Float on your back and control your breathing.</p>
       <div class="warn-block"><strong>// CRITICAL: AFTERDROP</strong>Core temperature continues dropping after removal from cold water as cold blood recirculates from extremities. Can cause cardiac arrest 30+ minutes after rescue. Keep them horizontal, keep them warm, get EMS.</div>`
+  },
+  { id:6, cat:"HOME", date:"2026.04.11", filter:"home",
+    title:"You can carry a full sheet of drywall alone. Here's the balance point.",
+    excerpt:"A 4x8 sheet of drywall weighs 50–70 lbs and acts like a sail. Most people fight it. If you find the balance point, it practically carries itself.",
+    body:`<h2>Why It Feels Impossible</h2>
+      <p>Drywall is awkward, not heavy. The problem is leverage — holding it flat or grabbing one end turns it into a lever working against you. The fix is simple: work with the physics instead of against them.</p>
+      <div class="callout"><strong>// THE METHOD</strong>Stand the sheet on its long edge (portrait). Lean it against your body at roughly chest height. Reach down and grip the bottom edge at the center — not the corner. Walk. The sheet balances across your forearm. Steer with your body, not your arms.</div>
+      <h2>Why It Works</h2>
+      <p>The balance point of a 4x8 sheet is dead center — 2 feet from either end, 2 feet from either side. When you grip the bottom at center and lean the top against your shoulder/chest, the sheet is balanced across a single point. You're not lifting it, you're just keeping it from tipping.</p>
+      <p>Your free hand can now open doors, move obstacles, or brace against walls. On stairs, lean it slightly more vertical and take it slow — same principle holds.</p>
+      <div class="warn-block"><strong>// WATCH FOR</strong>Wind. A full sheet in open air catches like a sail. On a jobsite or outside, have someone spot you or wait. Also watch doorframes — sheets are 4 feet wide, standard doors are 32–36 inches. You'll need to tip it diagonally through.</div>
+      <h2>For Half Sheets</h2>
+      <p>4x4 half sheets are easy alone either way. For odd cuts, just find the new center of the long edge and grip there. Same principle scales to any size.</p>`
+  },
+  { id:7, cat:"DIGITAL", date:"2026.04.11", filter:"digital",
+    title:"Two search operators that make Google actually work.",
+    excerpt:"Quotes and site: are built into every search engine and almost nobody uses them. They cut through SEO garbage and surface exactly what you're looking for.",
+    body:`<h2>The Operators</h2>
+      <p>Search engines support syntax called operators — special characters that modify how results are filtered. Most people type queries like they're texting. Two operators alone will change what search returns for you.</p>
+      <div class="callout"><strong>// OPERATOR 1: QUOTES ""</strong>Wrapping a phrase in quotes forces an exact match. The search engine returns only pages containing that exact string of words, in that order.<br><br>Without quotes: <code>circuit breaker keeps tripping</code> → millions of SEO articles<br>With quotes: <code>"circuit breaker keeps tripping"</code> → forum threads, actual people with actual problems</div>
+      <div class="callout"><strong>// OPERATOR 2: SITE:</strong><code>site:reddit.com circuit breaker keeps tripping</code> limits results to one domain. Combine with quotes and you're searching that site's content directly, better than most sites' own search.<br><br>Useful targets: <code>site:reddit.com</code> · <code>site:stackoverflow.com</code> · <code>site:gov</code> · <code>site:edu</code></div>
+      <h2>How To Combine Them</h2>
+      <p>They stack. <code>site:reddit.com "anode rod" water heater</code> returns Reddit threads where someone used that exact phrase. You skip every listicle and land in real conversation.</p>
+      <p>For legal or government info: <code>site:gov "tenant rights" Indiana</code> pulls official state and federal pages only. No legal-advice blogs, no ads, no paywalls.</p>
+      <div class="warn-block"><strong>// OTHER USEFUL ONES</strong><code>-word</code> excludes a term. <code>filetype:pdf</code> returns only PDFs — useful for manuals, code documents, research papers. <code>before:2020</code> and <code>after:2020</code> filter by date. These work on Google, Bing, and DuckDuckGo.</div>
+      <h2>When To Use This</h2>
+      <p>Any time the first page of results is all the same article rewritten 40 times. Any time you need a primary source. Any time you want real people's experience instead of optimized content. Which is most of the time.</p>`
   }
 ];
 
