@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V0IDL1NE — Field Guides</title>
+<meta name="description" content="Step-by-step guides for things you should know how to do. No intro. No filler. Just the steps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://v0idl1ne.com/guides">
+<meta property="og:title" content="V0IDL1NE — Field Guides">
+<meta property="og:description" content="Step-by-step guides for things you should know how to do. No intro. No filler. Just the steps.">
+<meta property="og:image" content="https://v0idl1ne.com/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://v0idl1ne.com/guides">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #04040c;
+  --void2: #07071a;
+  --void3: #0a0a1e;
+  --purple: #8800ff;
+  --purple-dim: #440088;
+  --purple-bright: #aa44ff;
+  --red: #7a0000;
+  --red-bright: #bb1a00;
+  --red-glow: #ee3300;
+  --blue: #050d2e;
+  --blue-mid: #0a1a55;
+  --blue-bright: #1a3a99;
+  --blue-glow: #2255cc;
+  --blue-star: #4488ff;
+  --white: #f0eaf8;
+  --text: #c0b8d8;
+  --text-dim: #60567a;
+  --text-muted: #2a2040;
+  --mono: 'Share Tech Mono', monospace;
+  --display: 'Barlow Condensed', sans-serif;
+  --body: 'Barlow', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--body);
+  min-height: 100vh;
+  cursor: crosshair;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.06) 2px, rgba(0,0,0,0.06) 4px);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ─── NAV ─── */
+.nav-strip {
+  position: sticky;
+  top: 0; z-index: 100;
+  background: rgba(4,4,12,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(34,85,204,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  height: 52px;
+}
+.nav-strip::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--red-bright), var(--blue-glow), transparent);
+}
+.nav-logo {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  text-decoration: none;
+}
+.acc-p { color: var(--purple-bright); }
+.acc-r { color: var(--red-glow); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+.nav-link {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.nav-link:hover { color: var(--blue-star); }
+.nav-link.active { color: var(--purple-bright); }
+.nav-tags { display: flex; height: 100%; }
+.nav-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  padding: 0 1.1rem;
+  cursor: pointer;
+  border: none; background: none;
+  height: 100%;
+  display: flex; align-items: center;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+  position: relative; top: 1px;
+}
+.nav-tag:hover { color: var(--blue-star); }
+.nav-tag.active { color: var(--purple-bright); border-bottom-color: var(--purple); }
+
+/* ─── HERO ─── */
+.page-hero {
+  padding: 5rem 4rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(34,85,204,0.1);
+  position: relative;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 4rem;
+  width: 120px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+.page-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  color: var(--blue-bright);
+  margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.page-eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.page-sub {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+/* ─── MAIN ─── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+/* ─── FILTER BAR ─── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(34,85,204,0.15);
+  width: fit-content;
+}
+.filter-btn {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-right: 1px solid rgba(34,85,204,0.15);
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:last-child { border-right: none; }
+.filter-btn:hover { color: var(--blue-star); background: rgba(34,85,204,0.05); }
+.filter-btn.active { color: var(--purple-bright); background: rgba(136,0,255,0.06); }
+
+/* ─── SECTION HEADER ─── */
+.section-header {
+  display: flex; align-items: center; gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+.section-rule {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright) 0%, var(--purple) 20%, var(--blue-glow) 50%, transparent 80%);
+}
+.section-count {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--blue-bright);
+}
+
+/* ─── GUIDE GRID ─── */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(34,85,204,0.07);
+  margin-bottom: 5rem;
+}
+
+.guide-card {
+  background: var(--void);
+  padding: 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.guide-card:hover {
+  background: linear-gradient(160deg, var(--void2) 0%, rgba(5,13,46,0.6) 100%);
+}
+.guide-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--blue-star), var(--red-bright));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.guide-card:hover::after { transform: scaleX(1); }
+
+.guide-num {
+  font-family: var(--mono);
+  font-size: 3rem;
+  color: var(--text-muted);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+}
+.guide-cat {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+.guide-card:nth-child(3n+1) .guide-cat { color: var(--purple-bright); }
+.guide-card:nth-child(3n+2) .guide-cat { color: var(--blue-star); }
+.guide-card:nth-child(3n+3) .guide-cat { color: var(--red-glow); }
+
+.guide-title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  flex: 1;
+}
+.guide-hook {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.guide-meta {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.guide-meta-arrow { color: var(--blue-bright); transition: color 0.15s; }
+.guide-card:hover .guide-meta-arrow { color: var(--blue-star); }
+.guide-time {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* ─── GUIDE VIEW ─── */
+.guide-view { display: none; }
+.guide-view.open { display: block; }
+.guides-view.hidden { display: none; }
+
+.guide-full {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+}
+.back {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid rgba(34,85,204,0.2);
+  padding: 8px 18px;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  transition: all 0.15s;
+}
+.back:hover { color: var(--blue-star); border-color: var(--blue-glow); }
+
+.guide-full-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  color: var(--blue-star);
+  margin-bottom: 1rem;
+}
+.guide-full-title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.guide-full-meta {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.15em;
+  color: var(--text-muted);
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(180,20,0,0.15);
+  border-bottom: 1px solid rgba(34,85,204,0.15);
+  margin-bottom: 2.5rem;
+  display: flex; gap: 2rem;
+}
+
+/* Guide body styles */
+.guide-body .tools-block {
+  border-left: 2px solid var(--purple-dim);
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 2.5rem;
+  background: rgba(136,0,255,0.04);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.guide-body .tools-block strong {
+  display: block;
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  color: var(--purple-bright);
+  margin-bottom: 0.6rem;
+}
+.guide-body .step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  align-items: flex-start;
+}
+.guide-body .step-num {
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2rem;
+  padding-top: 0.15rem;
+}
+.guide-body .step-content {
+  flex: 1;
+}
+.guide-body .step-content strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+.guide-body .step-content p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text);
+  font-weight: 300;
+}
+.guide-body .warn-block {
+  border-left: 2px solid var(--red-bright);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: rgba(180,20,0,0.05);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.guide-body .warn-block strong {
+  display: block;
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  color: var(--red-glow);
+  margin-bottom: 0.6rem;
+}
+.guide-body code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--blue-star);
+  background: rgba(34,85,204,0.1);
+  padding: 1px 6px;
+}
+.steps-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.steps-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(34,85,204,0.3), transparent);
+}
+
+/* Share bar */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(34,85,204,0.12);
+}
+.share-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+.share-btn {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  padding: 7px 14px;
+  border: 1px solid rgba(34,85,204,0.25);
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.share-btn:hover { color: var(--blue-star); border-color: var(--blue-glow); background: rgba(34,85,204,0.08); }
+.share-btn.copied { color: var(--purple-bright); border-color: var(--purple-dim); }
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid rgba(34,85,204,0.08);
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 0.52rem; letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+.footer-link {
+  font-family: var(--mono);
+  font-size: 0.52rem; letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: var(--purple-bright); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-eyebrow { animation: fadeUp 0.7s ease both 0.1s; }
+.page-title   { animation: fadeUp 0.7s ease both 0.2s; }
+.page-sub     { animation: fadeUp 0.7s ease both 0.3s; }
+
+@media (max-width: 900px) {
+  .guide-grid { grid-template-columns: 1fr 1fr; }
+  .nav-strip, .page-hero, .main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .guide-full { padding: 3rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  .guide-grid { grid-template-columns: 1fr; }
+  .nav-tags { display: none; }
+  footer { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="guides-view" id="guidesView">
+
+  <nav class="nav-strip">
+    <a href="index.html" class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</a>
+    <div class="nav-right">
+      <div class="nav-tags">
+        <button class="nav-tag active" onclick="filter('all',this)">ALL</button>
+        <button class="nav-tag" onclick="filter('automotive',this)">AUTOMOTIVE</button>
+        <button class="nav-tag" onclick="filter('electrical',this)">ELECTRICAL</button>
+        <button class="nav-tag" onclick="filter('plumbing',this)">PLUMBING</button>
+        <button class="nav-tag" onclick="filter('home',this)">HOME</button>
+      </div>
+      <a href="index.html" class="nav-link">← ENTRIES</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-eyebrow">// field_guides</div>
+    <div class="page-title">FIELD<br>GUIDES</div>
+    <div class="page-sub">// how to do the thing. no intro. no filler. tools, steps, what to watch for. that's it.</div>
+  </div>
+
+  <main class="main">
+    <div class="section-header">
+      <span class="section-label">// all_guides</span>
+      <div class="section-rule"></div>
+      <span class="section-count" id="guideCount">15 guides</span>
+    </div>
+    <div class="guide-grid" id="guideGrid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-copy">// V0IDL1NE — FIELD.GUIDES — NO_RIGHTS_RESERVED</div>
+    <a href="index.html" class="footer-link">← back to entries</a>
+  </footer>
+
+</div>
+
+<!-- SINGLE GUIDE VIEW -->
+<div class="guide-view" id="guideView">
+  <nav class="nav-strip">
+    <a href="index.html" class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</a>
+    <button class="back" onclick="closeGuide()">← ALL GUIDES</button>
+  </nav>
+  <div class="guide-full" id="guideContent"></div>
+</div>
+
+<script>
+const guides = [
+  { id:0, cat:"AUTOMOTIVE", filter:"automotive", time:"30 min", saves:"$40–80",
+    title:"How to change your engine oil",
+    hook:"Takes about 30 minutes and saves $40–80 every time.",
+    tools:"Correct oil (check owner's manual for weight and quantity) · New oil filter · Drain pan · Wrench set · Oil filter wrench · Ramps or jack stands",
+    steps:[
+      {h:"Warm the engine", b:"Run it for 2–3 minutes — warm oil drains faster and carries more contaminants. Shut it off. Do not drain hot — let it sit 5 minutes."},
+      {h:"Get under the car", b:"Use ramps or jack stands — never work under a car on just a floor jack. Locate the drain plug on the lowest point of the oil pan."},
+      {h:"Drain the oil", b:"Place drain pan under the plug. Remove with a wrench (counterclockwise). Let oil drain fully — at least 5 minutes. The plug has a washer — inspect it, replace if deformed."},
+      {h:"Remove the oil filter", b:"Move drain pan under the filter. Remove by hand or with a filter wrench. Wipe the mating surface clean. Make sure the old gasket didn't stick to the engine."},
+      {h:"Install new filter", b:"Lightly coat the new filter's rubber gasket with fresh oil. Hand-tighten only — do not use a wrench to install. Snug plus a quarter turn."},
+      {h:"Reinstall drain plug", b:"Snug plus a quarter turn. Don't overtighten — you'll strip the threads or crack the pan. Some plugs use a crush washer — replace it if so."},
+      {h:"Add new oil", b:"Through the top fill cap. Add per your manual's spec. Check dipstick after adding — between MIN and MAX marks. Don't overfill."},
+      {h:"Check for leaks", b:"Run the engine 30 seconds. Look under the car. Check the drain plug and filter. Shut off, wait 2 minutes, recheck dipstick."}
+    ],
+    warn:"Dispose of used oil properly — most auto parts stores take it for free. Don't pour it down the drain or in the trash."
+  },
+  { id:1, cat:"AUTOMOTIVE", filter:"automotive", time:"20 min", saves:"Stranded",
+    title:"How to change a flat tire",
+    hook:"The spare in your trunk is useless if you've never done this before.",
+    tools:"Spare tire · Jack (in your trunk) · Lug wrench · Owner's manual (shows jack points)",
+    steps:[
+      {h:"Pull fully off the road", b:"Flat surface, fully clear of traffic. Hazards on. Parking brake applied. If you have them, set wheel wedges behind the opposite tires."},
+      {h:"Loosen lug nuts before jacking", b:"Break them loose counterclockwise while the tire is still on the ground — the tire's contact resists rotation. Don't remove them yet. Just break the torque."},
+      {h:"Find the jack point", b:"Your manual shows the correct jack points near each wheel — usually a notch in the pinch weld or a marked reinforced point. Using the wrong spot can collapse the sill."},
+      {h:"Jack the vehicle", b:"Until the flat is about 6 inches off the ground. Never get under a vehicle on a floor jack alone."},
+      {h:"Remove lug nuts and flat", b:"Remove lug nuts completely, keeping them somewhere they won't roll away. Pull off the flat tire."},
+      {h:"Mount the spare", b:"Hand-tighten lug nuts in a star pattern — not circular. Opposite sides. This ensures even seating."},
+      {h:"Lower and fully tighten", b:"Lower the vehicle until the tire contacts the ground. Fully tighten lug nuts in the same star pattern. Firm — 80–100 ft-lbs by feel. Then lower completely and remove the jack."},
+      {h:"Stow your flat and get to a shop", b:"Compact spares (donuts) are rated 50 mph max and 50–70 miles. They're not a permanent solution."}
+    ],
+    warn:"Check your spare's pressure periodically — a flat spare in your trunk is useless. Most compact spares should be at 60 PSI."
+  },
+  { id:2, cat:"AUTOMOTIVE", filter:"automotive", time:"10 min", saves:"Stuck",
+    title:"How to jump start a car",
+    hook:"Wrong cable order can damage electronics or cause a spark near the battery.",
+    tools:"Jumper cables (10-gauge minimum, 16-foot preferred) · Working vehicle",
+    steps:[
+      {h:"Position vehicles", b:"Park the working car so batteries are close but cars are not touching. Both cars off."},
+      {h:"Red to dead positive", b:"Connect RED cable to the dead battery's POSITIVE terminal (marked + or red cover)."},
+      {h:"Red to good positive", b:"Connect the other RED end to the working car's POSITIVE terminal."},
+      {h:"Black to good negative", b:"Connect BLACK cable to the working car's NEGATIVE terminal (marked −)."},
+      {h:"Black to engine block — not dead battery", b:"Connect the other BLACK end to an unpainted metal surface on the dead car's engine block — NOT the dead battery's negative terminal. This prevents sparks near the battery, which can off-gas hydrogen."},
+      {h:"Start the working car", b:"Run it for 2–3 minutes to transfer some charge."},
+      {h:"Start the dead car", b:"If it doesn't start, wait another 2 minutes and try again. If it still won't start, the battery may be too far gone."},
+      {h:"Remove in reverse order", b:"Black from engine block → black from good car → red from good car → red from started car."},
+      {h:"Drive to recharge", b:"Drive for at least 20–30 minutes to let the alternator recharge the battery. If it won't hold a charge, the battery needs replacement."}
+    ],
+    warn:"If the dead battery is cracked, leaking, or frozen — do not jump start. A damaged battery can explode."
+  },
+  { id:3, cat:"AUTOMOTIVE", filter:"automotive", time:"10 min", saves:"Failures",
+    title:"How to check and top off essential fluids",
+    hook:"Five checks that take 10 minutes and prevent expensive failures.",
+    tools:"Correct fluids for your vehicle · Clean rag",
+    steps:[
+      {h:"Engine oil", b:"Pull dipstick, wipe clean, reinsert fully, pull again. Level should be between MIN and MAX. Top off with the viscosity on your fill cap. Don't overfill."},
+      {h:"Coolant", b:"Check the plastic reservoir — NOT the radiator cap. Level between MIN/MAX when cold. Add 50/50 premixed coolant if low. If consistently low with no visible leak: internal leak, see a mechanic."},
+      {h:"Brake fluid", b:"Small translucent reservoir on the master cylinder (driver-side firewall). Level between MIN and MAX. If consistently low, you have a leak — don't just top it off and move on."},
+      {h:"Power steering fluid", b:"Check the dipstick on the reservoir (if not electric steering). Transmission fluid: dipstick on older cars, sealed on newer — many still benefit from a change at 60–100k miles despite 'lifetime fluid' labels."},
+      {h:"Washer fluid", b:"Fill freely. The only fluid you genuinely can't mess up — just use actual washer fluid, not water."}
+    ],
+    warn:"Never mix coolant types — green (traditional), orange/yellow (OAT), and pink/purple (HOAT) are not interchangeable. Check your manual or reservoir cap for the correct type."
+  },
+  { id:4, cat:"ELECTRICAL", filter:"electrical", time:"20 min", saves:"$150+",
+    title:"How to replace an electrical outlet",
+    hook:"Takes 20 minutes and a $4 outlet. Kill the power first. Every time.",
+    tools:"New outlet (15A standard or 20A if wires are 12-gauge) · Flathead and Phillips screwdriver · Non-contact voltage tester",
+    steps:[
+      {h:"Kill power and verify", b:"Flip the breaker. Test the outlet with a voltage tester or plug in a lamp. Confirm it's dead. Do not assume the breaker is labeled correctly — test."},
+      {h:"Remove cover plate and outlet", b:"Unscrew the cover plate. Unscrew the two outlet screws from the electrical box. Pull the outlet out slowly — wires have limited slack."},
+      {h:"Photograph the wiring", b:"Before disconnecting anything, take a photo. You want to know which wire goes where when you connect the new outlet."},
+      {h:"Disconnect wires", b:"Black (hot) connects to the brass screw. White (neutral) to silver screw. Bare copper or green (ground) to green screw. If wires are backstabbed (pushed into holes in the back) — cut them back slightly to get fresh copper and use the screw terminals instead. Backstab connections fail."},
+      {h:"Connect to new outlet", b:"Wrap each wire clockwise around its screw so tightening pulls the wire in rather than pushing it out. Tighten firmly — loose connections are a fire hazard."},
+      {h:"Fold and reassemble", b:"Carefully fold wires into the box. Screw the outlet in, replace the cover plate."},
+      {h:"Restore power and test", b:"Flip the breaker. Test with a tester or lamp. Done."}
+    ],
+    warn:"If you find aluminum wiring (silver-colored, not copper-orange), standard outlets are not rated for it. Use CO/ALR-rated outlets or call an electrician."
+  },
+  { id:5, cat:"ELECTRICAL", filter:"electrical", time:"5 min", saves:"Service call",
+    title:"How to reset a tripped circuit breaker",
+    hook:"Just pushing it toward ON doesn't work. You have to pass through OFF first.",
+    tools:"Nothing — just your hand",
+    steps:[
+      {h:"Find the tripped breaker", b:"Look for one that's moved to the middle position — not fully ON or fully OFF. It may be only slightly off-center from the others. This is the tripped position."},
+      {h:"Unplug whatever was on that circuit", b:"Before resetting, reduce the load. Resetting with a heavy load still connected may trip it immediately again."},
+      {h:"Push firmly to OFF", b:"All the way to the OFF position. You'll feel a click. This is required — you cannot reset from the middle position directly to ON."},
+      {h:"Push back to ON", b:"Another click. The breaker is reset."},
+      {h:"Gradually restore devices", b:"Plug things back in one at a time. If it trips again immediately with nothing plugged in: wiring fault. If it trips with a specific device: that device may be faulty, or the circuit is overloaded."}
+    ],
+    warn:"A breaker that trips repeatedly is doing its job. Don't tape it or wedge it in the ON position. Find the cause. A breaker that won't hold at all may need replacement."
+  },
+  { id:6, cat:"PLUMBING", filter:"plumbing", time:"15 min", saves:"Flood damage",
+    title:"How to shut off water at the meter",
+    hook:"Know this before a pipe bursts. You have minutes.",
+    tools:"Meter key (T-shaped, ~$10 at hardware stores) or large flathead screwdriver · Adjustable wrench",
+    steps:[
+      {h:"Find the meter box", b:"Typically in the ground near the street or sidewalk inside a covered concrete or plastic box. Lift the lid — a flathead pry works."},
+      {h:"Identify the right valve", b:"There are usually two: one on the street side (the utility's valve) and one on the house side. Use the house-side valve."},
+      {h:"Turn off the water", b:"Ball valve: quarter-turn, 90 degrees. Handle perpendicular to the pipe = OFF. Gate valve: multi-turn clockwise to close — keep turning until it stops."},
+      {h:"Confirm water is off", b:"Open a faucet inside. If trickles then stops, you're off."},
+      {h:"Restore when done", b:"Reverse the process. Open slowly to avoid water hammer (the banging you hear from sudden pressure changes)."}
+    ],
+    warn:"If the house-side valve is a gate valve and hasn't been turned in years, it may be seized. Don't force it to the point of breaking it. Call a plumber if it won't budge — you need it working before you need it in an emergency."
+  },
+  { id:7, cat:"PLUMBING", filter:"plumbing", time:"20 min", saves:"$100+ plumber call",
+    title:"How to unclog a drain without chemicals",
+    hook:"Chemical drain cleaners are corrosive, often don't work, and can damage pipes. Try this first.",
+    tools:"Cup plunger (sinks) or flange plunger (toilet) · Bucket · Possibly a drain snake or hand auger",
+    steps:[
+      {h:"Remove the stopper", b:"Most sink stoppers lift out or unscrew. Some are held by a pivot rod underneath — loosen the nut on the drain tailpiece to remove it."},
+      {h:"Cover the overflow", b:"Sinks have an overflow hole near the top of the basin. Cover it with a wet rag. Without this, your plunger force goes right out the overflow instead of down the drain."},
+      {h:"Add water", b:"Fill the sink a few inches — plungers need water, not air, to create pressure."},
+      {h:"Plunge", b:"Flat cup seal over the drain. Push down slowly to expel air, then pull up sharply. Repeat 10–15 firm strokes. Then pull up quickly to break suction."},
+      {h:"Check the P-trap if plunging fails", b:"Place a bucket under the U-shaped pipe beneath the sink. Unscrew the slip nuts (or use pliers if they're stuck). Remove the trap, clear the clog directly, rinse, reinstall."},
+      {h:"For toilets: use a flange plunger", b:"The rubber flap folds out to seal the drain opening. Push slowly first to expel air, then use firm push-pull strokes. A toilet auger reaches further without damaging the porcelain."}
+    ],
+    warn:"If multiple drains are slow or backing up simultaneously, the clog is in the main line — not a trap or branch line. That requires a drain snake or professional help."
+  },
+  { id:8, cat:"PLUMBING", filter:"plumbing", time:"10 min", saves:"$70–200/month",
+    title:"How to fix a running toilet",
+    hook:"Most of the time it's a $7 flapper and 10 minutes.",
+    tools:"Food coloring · Replacement flapper (match size — 2\" standard, 3\" newer toilets) · Possibly a fill valve",
+    steps:[
+      {h:"Diagnose: flapper or float?", b:"Add food coloring to the tank (not bowl). Don't flush. Wait 15 minutes. Color in bowl = flapper leak. Water running into the overflow tube (tall center tube) = float set too high."},
+      {h:"Fix the flapper — shut supply valve", b:"The small valve behind/under the toilet. Turn clockwise to close. Flush to empty the tank."},
+      {h:"Remove the old flapper", b:"Unhook the chain from the flush handle arm. Slide the flapper off the two ears on the flush valve seat."},
+      {h:"Match and install new flapper", b:"Take the old flapper to the hardware store and match the size. Snap the new one onto the ears, reconnect the chain with about ¼\" of slack — too tight and it won't seal; too loose and it may get caught."},
+      {h:"Fix the float if needed", b:"Cup float (on fill valve shaft): slide the adjustment clip down to lower the water level. Older ball-float: bend the arm slightly downward."},
+      {h:"Test", b:"Turn supply valve back on. Let tank fill. Flush and watch. Check for color in bowl after 15 minutes."}
+    ],
+    warn:"If the toilet still runs after replacing the flapper, the fill valve may need replacement. They're $10–15 and the swap takes 20 minutes — same basic process as the flapper."
+  },
+  { id:9, cat:"HOME", filter:"home", time:"2 hours", saves:"Mold remediation",
+    title:"How to caulk a tub or shower properly",
+    hook:"Bad caulk job lasts 6 months. Good one lasts years. The difference is prep.",
+    tools:"Caulk remover solvent · Plastic scraper or caulk removal tool · 100% silicone mold-resistant caulk · Caulk gun · Painter's tape · Denatured or rubbing alcohol",
+    steps:[
+      {h:"Remove all old caulk", b:"Use a plastic scraper and caulk remover solvent on stubborn silicone — let it soak 2 hours. Get every bit. New caulk over old caulk bonds to the old layer, not the wall, and fails at the same rate as what's underneath."},
+      {h:"Clean and dry completely", b:"Wipe with rubbing alcohol. Let dry completely — wait 24 hours after the last shower use. Caulk won't bond to damp surfaces."},
+      {h:"Tape both sides of the joint", b:"Apply painter's tape in straight lines on both sides of the gap. This is what makes the difference between a clean line and a mess."},
+      {h:"Cut the tube tip", b:"At a 45° angle. Small opening — about 3mm. A small bead is easier to control and tool than a big one."},
+      {h:"Apply in one continuous bead", b:"Don't stop and restart mid-run. Steady, even pressure. Move at a pace that keeps the bead consistent."},
+      {h:"Tool the bead", b:"Wet finger or a caulk finishing tool in one smooth pass. Don't go back over it."},
+      {h:"Pull tape immediately", b:"While caulk is still wet. Pull at a 45° angle back toward the bead — not straight up."},
+      {h:"Don't touch it", b:"24 hours minimum before water contact. 48 hours for full cure."}
+    ],
+    warn:"Use 100% silicone, not latex or acrylic caulk, in wet areas. Silicone flexes with the tub and tile. Latex cracks. The tube will say '100% silicone' — don't use anything else here."
+  },
+  { id:10, cat:"HOME", filter:"home", time:"45 min", saves:"Drywall replacement",
+    title:"How to patch a drywall hole (fist-sized or smaller)",
+    hook:"The right technique means no visible seam after paint.",
+    tools:"Self-adhesive mesh patch or California patch materials · Joint compound (mud) · 6\" and 10\" drywall knives · 120-grit and 220-grit sandpaper · Primer · Paint",
+    steps:[
+      {h:"For holes up to 4\": use a mesh patch", b:"Press a self-adhesive mesh patch flat over the hole. Make sure it lays flat — any gaps or bubbles will show."},
+      {h:"Apply first coat of mud", b:"Use a 6\" knife, apply joint compound over the mesh. Feather the edges — thin the mud out 4–6 inches past the patch edge. This is the most important step. Abrupt edges will show through paint."},
+      {h:"Let it dry completely", b:"Minimum 24 hours. It will look white when fully dry. Don't rush with a heat gun — it causes cracking. Touch it — if it's cool in any spot, it's still wet."},
+      {h:"Sand", b:"120-grit first. You're knocking down high spots, not sanding to bare substrate. Then 220-grit for final smoothing."},
+      {h:"Second coat if needed", b:"If you can see the mesh or the surface isn't smooth, apply a thin second coat. Sand again after drying."},
+      {h:"Prime before painting", b:"Unprimed joint compound absorbs paint differently than surrounding drywall. It will look dull and different (called flashing) even with matching paint. Prime the patch — just the patch area is fine."},
+      {h:"Paint", b:"Match your wall. Two coats usually needed to blend."}
+    ],
+    warn:"For holes larger than 6–8 inches, use the California patch method or a backer board — a mesh patch alone won't have enough support and will crack. Look up 'California patch' for larger repairs."
+  },
+  { id:11, cat:"HOME", filter:"home", time:"1 hour", saves:"Paint failure",
+    title:"How to prep walls for painting so the paint actually sticks",
+    hook:"Prep is why paint fails. The paint is almost never the problem.",
+    tools:"TSP substitute or sugar soap · Sponge or sponge mop · 120-grit sandpaper or sanding sponge · Primer · Spackling or joint compound for repairs",
+    steps:[
+      {h:"Clear and protect", b:"Move furniture out or to center. Drop cloths on floors. Remove outlet and switch covers."},
+      {h:"Wash the walls", b:"Mix TSP substitute or sugar soap per label. Wash top to bottom. Kitchen and bathroom walls especially — cooking grease and soap scum are invisible but will cause peeling. Rinse with clean water."},
+      {h:"Let dry completely", b:"At least a few hours. Paint over damp walls fails."},
+      {h:"Repair holes and dings", b:"Spackling for small nail holes, joint compound for larger repairs. Let dry, then sand smooth and flush."},
+      {h:"Scuff glossy surfaces", b:"Any surface with a sheen needs to be dulled before repainting. Lightly scuff with 120-grit sandpaper — you're just breaking the shine, not sanding through the paint. Or use liquid deglosser."},
+      {h:"Prime", b:"Bare drywall, repaired spots, any stain (water, smoke, grease) needs primer. Stain-blocking primer (Zinsser BIN or Kilz) on stains — regular primer won't stop them from bleeding through."},
+      {h:"Then paint", b:"Now the paint has something to bond to."}
+    ],
+    warn:"Painting over an oil-based paint with latex (water-based) without proper prep will peel. If you're not sure what's on the wall: rub a cotton ball soaked in denatured alcohol on the surface. Paint transfers = latex. No transfer = oil-based. Oil-based requires bonding primer before latex topcoat."
+  },
+  { id:12, cat:"HOME", filter:"home", time:"30 min", saves:"HVAC repair",
+    title:"How to find and seal attic air leaks",
+    hook:"Air sealing is more impactful than adding insulation. Do this first.",
+    tools:"Flashlight · Canned spray foam (Great Stuff or similar) · Caulk · Rigid foam board · Utility knife",
+    steps:[
+      {h:"Go into the attic on a cold day", b:"Feel for drafts near the top plates (where walls meet ceiling), around light fixtures, plumbing penetrations, and the attic hatch. Cold air infiltrating is easy to feel."},
+      {h:"Find the common leak points", b:"Gaps around plumbing stacks and wiring where they penetrate the top plate. Recessed light cans that open directly into the attic. The attic hatch itself. Soffits above kitchen cabinets."},
+      {h:"Seal small gaps", b:"Anything under 1 inch: canned spray foam. Apply, let expand, let cure, trim flush. Move fast — it expands quickly."},
+      {h:"Seal larger gaps", b:"Cut rigid foam board to fit, foam-glue into place, then seal the perimeter with canned foam. For very large openings, build a foam dam first."},
+      {h:"Address recessed lights", b:"Old-style can lights that open into the attic are major leaks and heat sources. Cover with an airtight cap box (IC-rated and airtight) available at hardware stores."},
+      {h:"Seal the attic hatch", b:"Add foam weatherstripping to the frame. Glue rigid foam board to the attic-side of the hatch door. This single fix is often immediately noticeable."}
+    ],
+    warn:"Don't block soffit vents — those are intentional and necessary for attic ventilation. Only seal gaps between conditioned space and the attic, not ventilation paths."
+  },
+  { id:13, cat:"HOME", filter:"home", time:"30 min", saves:"Early heater failure",
+    title:"How to check and replace a water heater anode rod",
+    hook:"This $20 rod is why water heaters fail early. Most people never touch it.",
+    tools:"1-1/16\" socket and breaker bar (or impact wrench) · Teflon tape · Replacement anode rod (magnesium or aluminum/zinc) · Bucket",
+    steps:[
+      {h:"Shut down the heater", b:"Electric: flip the breaker. Gas: turn the dial to pilot or off."},
+      {h:"Shut off cold water supply", b:"The valve on the cold inlet pipe above the heater. Turn clockwise."},
+      {h:"Relieve pressure", b:"Open a hot water faucet somewhere in the house. Let it run until the flow stops. This prevents a vacuum when you open the heater."},
+      {h:"Find the anode rod port", b:"Usually a hex bolt on top of the heater — sometimes under a sheet metal cover. On some units it's under the plastic top cap. May be difficult to access if installed in a tight space."},
+      {h:"Remove the rod", b:"Use a 1-1/16\" socket and breaker bar or impact wrench — it will be tight. Break it loose counterclockwise. It may take significant force. Have a helper hold the heater if needed."},
+      {h:"Inspect the rod", b:"If it's less than half its original diameter, corroded down to the wire core, or heavily pitted — replace it. If it looks mostly intact, it can stay."},
+      {h:"Install the new rod", b:"Wrap the threads with Teflon tape. Thread in by hand first, then tighten with the socket. Snug — don't overtorque."},
+      {h:"Restore", b:"Turn cold water back on. Let the tank fill (leave a faucet open until water flows steadily). Restore power or relight pilot."}
+    ],
+    warn:"Replace every 3–5 years. If hot water smells like rotten eggs, switch from magnesium to an aluminum/zinc rod — the magnesium reacts with certain water chemistries to produce hydrogen sulfide."
+  },
+  { id:14, cat:"HOME", filter:"home", time:"20 min", saves:"Energy bills",
+    title:"How to seal and insulate an attic hatch",
+    hook:"Most attic hatches are a direct hole in your thermal envelope. This one fix is often immediately noticeable.",
+    tools:"Foam weatherstripping (self-adhesive, 3/8\" or 1/2\") · Rigid foam board (R-6 to R-10) · Construction adhesive or spray foam · Utility knife · Straightedge",
+    steps:[
+      {h:"Check what you have", b:"Open the hatch. Look at the back of the door (the attic-side). If it's bare wood or drywall with no insulation — this is the fix you need."},
+      {h:"Measure the hatch door", b:"Measure the attic-side face of the hatch door. Cut rigid foam board to fit exactly. Use a utility knife and straightedge — score and snap."},
+      {h:"Attach foam to hatch door", b:"Apply construction adhesive or foam in dabs to the attic side of the hatch door. Press the foam board into place. Let it cure before closing the hatch."},
+      {h:"Weatherstrip the frame", b:"Clean the hatch frame (the opening in the ceiling) where the door rests. Apply self-adhesive foam weatherstripping around the full perimeter of the frame. This seals the air gap between door and frame."},
+      {h:"Add more foam if you can", b:"If your attic has blown insulation, you can build a simple foam box (four sides of rigid foam) over the hatch opening from the attic side, creating an insulated cap that sits over the hatch. Adds significantly more R-value."},
+      {h:"Test the improvement", b:"On a cold day, hold your hand near the closed hatch and feel for drafts. If you did it right: none."}
+    ],
+    warn:"Make sure the hatch still opens freely after adding foam board — measure the foam thickness against your available clearance. Trim if needed."
+  }
+];
+
+let activeFilter = 'all';
+
+function renderGrid() {
+  const grid = document.getElementById('guideGrid');
+  const filtered = activeFilter === 'all' ? guides : guides.filter(g => g.filter === activeFilter);
+  document.getElementById('guideCount').textContent = filtered.length + ' guides';
+  grid.innerHTML = filtered.map((g, i) => `
+    <div class="guide-card" onclick="openGuide(${g.id})">
+      <div class="guide-num">0${i+1}</div>
+      <div class="guide-cat">${g.cat}</div>
+      <div class="guide-title">${g.title}</div>
+      <div class="guide-hook">${g.hook}</div>
+      <div class="guide-meta">
+        <span>${g.time} · saves ${g.saves}</span>
+        <span class="guide-meta-arrow">→</span>
+      </div>
+    </div>`).join('');
+}
+
+function filter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.nav-tag').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  renderGrid();
+}
+
+function openGuide(id) {
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  const url = `${location.origin}${location.pathname}#guide-${id}`;
+  const tweetText = encodeURIComponent(`${g.title} — ${url}`);
+  document.getElementById('guidesView').classList.add('hidden');
+  document.getElementById('guideView').classList.add('open');
+  const stepsHtml = g.steps.map((s, i) => `
+    <div class="step">
+      <div class="step-num">${i+1}</div>
+      <div class="step-content">
+        <strong>${s.h}</strong>
+        <p>${s.b}</p>
+      </div>
+    </div>`).join('');
+  document.getElementById('guideContent').innerHTML = `
+    <button class="back" onclick="closeGuide()">← ALL GUIDES</button>
+    <div class="guide-full-eyebrow">${g.cat} // FIELD GUIDE</div>
+    <h1 class="guide-full-title">${g.title}</h1>
+    <div class="guide-full-meta">
+      <span>TIME: ${g.time}</span>
+      <span>SAVES: ${g.saves}</span>
+    </div>
+    <div class="guide-body">
+      <div class="tools-block"><strong>// TOOLS &amp; MATERIALS</strong>${g.tools}</div>
+      <div class="steps-label">// steps</div>
+      ${stepsHtml}
+      <div class="warn-block"><strong>// HEADS UP</strong>${g.warn}</div>
+    </div>
+    <div class="share-bar">
+      <span class="share-label">// share</span>
+      <button class="share-btn" onclick="copyLink('${url}', this)">COPY LINK</button>
+      <button class="share-btn" onclick="window.open('https://x.com/intent/tweet?text=${tweetText}','_blank')">POST ON X</button>
+      <button class="share-btn" onclick="window.open('https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(g.title)}','_blank')">POST TO REDDIT</button>
+    </div>`;
+  window.scrollTo(0,0);
+}
+
+function copyLink(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    btn.textContent = 'COPIED';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY LINK'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function closeGuide() {
+  document.getElementById('guidesView').classList.remove('hidden');
+  document.getElementById('guideView').classList.remove('open');
+  window.scrollTo(0,0);
+}
+
+renderGrid();
+</script>
+</body>
+</html>
