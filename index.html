@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V0IDL1NE — Public Record</title>
+<meta name="description" content="Knowledge they forgot to give you. No credentials. No paywalls. Just correct — electrical, legal, health, finance, survival.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://v0idl1ne.com/">
+<meta property="og:title" content="V0IDL1NE — Public Record">
+<meta property="og:description" content="Knowledge they forgot to give you. No credentials. No paywalls. Just correct.">
+<meta property="og:image" content="https://v0idl1ne.com/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="V0IDL1NE — Public Record">
+<meta name="twitter:description" content="Knowledge they forgot to give you. No credentials. No paywalls. Just correct.">
+<meta name="twitter:image" content="https://v0idl1ne.com/og-card.png">
+<link rel="canonical" href="https://v0idl1ne.com/">
+<link rel="alternate" type="application/rss+xml" title="V0IDL1NE" href="/feed.xml">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #04040c;
+  --void2: #07071a;
+  --void3: #0a0a1e;
+  --purple: #8800ff;
+  --purple-dim: #440088;
+  --purple-bright: #aa44ff;
+  --red: #7a0000;
+  --red-bright: #bb1a00;
+  --red-glow: #ee3300;
+  --blue: #050d2e;
+  --blue-mid: #0a1a55;
+  --blue-bright: #1a3a99;
+  --blue-glow: #2255cc;
+  --blue-star: #4488ff;
+  --white: #f0eaf8;
+  --text: #c0b8d8;
+  --text-dim: #60567a;
+  --text-muted: #2a2040;
+  --mono: 'Share Tech Mono', monospace;
+  --display: 'Barlow Condensed', sans-serif;
+  --body: 'Barlow', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--body);
+  min-height: 100vh;
+  cursor: crosshair;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.06) 2px, rgba(0,0,0,0.06) 4px);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* deep galaxy bg gradient */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(10,26,85,0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 60%, rgba(136,0,255,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 30% at 80% 40%, rgba(180,20,0,0.06) 0%, transparent 60%),
+    repeating-linear-gradient(90deg, rgba(26,58,153,0.025) 0px, transparent 1px, transparent 80px),
+    repeating-linear-gradient(0deg, rgba(26,58,153,0.025) 0px, transparent 1px, transparent 80px);
+}
+
+/* horizon glow */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red-bright) 0%, var(--purple) 35%, var(--blue-star) 65%, var(--red-bright) 100%);
+  box-shadow: 0 0 40px 8px rgba(34,85,204,0.35), 0 0 20px 4px rgba(136,0,255,0.4), 0 0 60px 2px rgba(180,20,0,0.2);
+}
+
+/* giant watermark V — correct: flat top, point at bottom */
+.hero-vmark {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88vw;
+  max-width: 940px;
+  opacity: 0.065;
+}
+
+/* lightning + star streaks */
+.hero-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 4rem 4rem;
+  max-width: 1100px;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--blue-bright);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+
+.hero-logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-mark { flex-shrink: 0; }
+
+.hero-wordmark {
+  font-family: var(--display);
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  text-shadow: 0 0 60px rgba(136,0,255,0.2), 0 0 100px rgba(34,85,204,0.15);
+}
+.acc-p { color: var(--purple-bright); }
+.acc-r { color: var(--red-glow); }
+.acc-b { color: var(--blue-star); }
+
+.hero-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--red-bright) 0%, var(--purple) 25%, var(--blue-glow) 60%, transparent 85%);
+  margin: 2rem 0;
+}
+
+.hero-tagline {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  max-width: 500px;
+  line-height: 1.85;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem; right: 4rem;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+.hero-scroll::after {
+  content: '';
+  display: block;
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--blue-glow), transparent);
+}
+
+/* ─── NAV ─── */
+.nav-strip {
+  position: sticky;
+  top: 0; z-index: 100;
+  background: rgba(4,4,12,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(34,85,204,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  height: 52px;
+}
+.nav-strip::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--red-bright), var(--blue-glow), transparent);
+}
+
+.nav-logo {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--white);
+}
+
+.nav-tags { display: flex; height: 100%; }
+.nav-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  padding: 0 1.1rem;
+  cursor: pointer;
+  border: none; background: none;
+  height: 100%;
+  display: flex; align-items: center;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+  position: relative; top: 1px;
+}
+.nav-tag:hover { color: var(--blue-star); }
+.nav-tag.active { color: var(--purple-bright); border-bottom-color: var(--purple); }
+
+/* ─── MAIN ─── */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+}
+
+/* ─── FEATURED ─── */
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(34,85,204,0.15);
+  margin-bottom: 5rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+}
+.featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 70px; height: 2px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+.featured::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 70px;
+  background: linear-gradient(to bottom, var(--red-bright), var(--blue-glow), transparent);
+}
+.featured:hover { border-color: rgba(68,136,255,0.4); }
+
+.featured-mark {
+  background: var(--void2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid rgba(34,85,204,0.12);
+}
+.featured-mark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 80%, rgba(10,26,85,0.5) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(34,85,204,0.015) 20px, rgba(34,85,204,0.015) 21px);
+}
+.featured-mark::after {
+  content: '';
+  position: absolute;
+  bottom: 15%; left: 50%;
+  transform: translateX(-50%);
+  width: 100px; height: 100px;
+  background: radial-gradient(circle, rgba(34,85,204,0.2) 0%, rgba(136,0,255,0.1) 40%, transparent 70%);
+}
+.featured-mark svg { position: relative; z-index: 1; }
+
+.featured-body {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--void2) 0%, rgba(5,13,46,0.4) 100%);
+}
+
+.featured-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--blue-star);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.featured-badge::before {
+  content: '';
+  display: block;
+  width: 20px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+
+.featured-title {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  letter-spacing: 0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.featured-excerpt {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+  font-weight: 300;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.featured-footer {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.featured-date {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
+.read-btn {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--blue-star);
+  background: rgba(34,85,204,0.08);
+  border: 1px solid rgba(34,85,204,0.3);
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.read-btn:hover { background: rgba(34,85,204,0.18); border-color: var(--blue-glow); }
+
+/* ─── SECTION HEADER ─── */
+.section-header {
+  display: flex; align-items: center; gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.3em;
+  color: var(--text-muted);
+}
+.section-rule {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright) 0%, var(--purple) 20%, var(--blue-glow) 50%, transparent 80%);
+}
+.section-count {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--blue-bright);
+}
+
+/* ─── POST GRID ─── */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(34,85,204,0.07);
+  margin-bottom: 5rem;
+}
+
+.post-card {
+  background: var(--void);
+  padding: 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex; flex-direction: column;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+/* galaxy blue tint on hover */
+.post-card:hover {
+  background: linear-gradient(160deg, var(--void2) 0%, rgba(5,13,46,0.6) 100%);
+}
+.post-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red-bright), var(--purple), var(--blue-star));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.post-card:hover::after { transform: scaleX(1); }
+
+.post-num {
+  font-family: var(--mono);
+  font-size: 3rem;
+  color: var(--text-muted);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+}
+
+.post-cat {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+  color: var(--purple-bright);
+}
+.post-card:nth-child(3n+1) .post-cat { color: var(--purple-bright); }
+.post-card:nth-child(3n+2) .post-cat { color: var(--blue-star); }
+.post-card:nth-child(3n+3) .post-cat { color: var(--red-glow); }
+
+.post-title {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  flex: 1;
+}
+
+.post-excerpt {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.post-meta-arrow { color: var(--blue-bright); transition: color 0.15s; }
+.post-card:hover .post-meta-arrow { color: var(--blue-star); }
+
+/* ─── SINGLE POST ─── */
+.post-view { display: none; }
+.post-view.open { display: block; }
+.blog-view.hidden { display: none; }
+
+.post-full {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+}
+
+.back {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid rgba(34,85,204,0.2);
+  padding: 8px 18px;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  transition: all 0.15s;
+}
+.back:hover { color: var(--blue-star); border-color: var(--blue-glow); }
+
+.post-full-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  color: var(--blue-star);
+  margin-bottom: 1rem;
+}
+
+.post-full-title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.post-full-meta {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.15em;
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(180,20,0,0.15);
+  border-bottom: 1px solid rgba(34,85,204,0.15);
+  margin-bottom: 3rem;
+}
+
+.post-body h2 {
+  font-family: var(--display);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--blue-star);
+  text-transform: uppercase;
+  margin: 2.5rem 0 1rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.post-body h2::before {
+  content: '';
+  display: inline-block;
+  width: 14px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+
+.post-body p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text);
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.callout {
+  border-left: 2px solid var(--blue-glow);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: rgba(34,85,204,0.06);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.callout strong {
+  display: block;
+  font-size: 0.62rem; letter-spacing: 0.25em;
+  color: var(--blue-star);
+  margin-bottom: 0.6rem;
+}
+
+.warn-block {
+  border-left: 2px solid var(--red-bright);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: rgba(180,20,0,0.05);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.warn-block strong {
+  display: block;
+  font-size: 0.62rem; letter-spacing: 0.25em;
+  color: var(--red-glow);
+  margin-bottom: 0.6rem;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--blue-star);
+  background: rgba(34,85,204,0.1);
+  padding: 1px 6px;
+}
+
+/* ─── SUBMIT ─── */
+.submit-section {
+  border-top: 1px solid rgba(34,85,204,0.12);
+  padding: 4rem;
+  display: flex; align-items: center; gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, transparent 0%, rgba(5,13,46,0.25) 100%);
+}
+.submit-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 4rem;
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+
+.submit-left { flex: 1; }
+.submit-num {
+  font-family: var(--display);
+  font-size: 6rem; font-weight: 900;
+  color: var(--text-muted);
+  line-height: 1; margin-bottom: 0.5rem;
+}
+.submit-label {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  color: var(--blue-bright);
+}
+
+.submit-right { flex: 2; }
+.submit-heading {
+  font-family: var(--display);
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.submit-body {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.submit-btn {
+  font-family: var(--mono);
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  color: var(--blue-star);
+  background: rgba(34,85,204,0.08);
+  border: 1px solid rgba(34,85,204,0.35);
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.submit-btn:hover { background: rgba(34,85,204,0.18); border-color: var(--blue-glow); }
+
+/* ─── ABOUT ─── */
+.about-section {
+  border-top: 1px solid rgba(136,0,255,0.12);
+  border-bottom: 1px solid rgba(34,85,204,0.1);
+  background: linear-gradient(180deg, rgba(7,7,26,0.6) 0%, var(--void) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 100%;
+  background: linear-gradient(to bottom, var(--purple), var(--blue-glow), transparent);
+}
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+.about-left-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.3em;
+  color: var(--purple);
+  margin-bottom: 1.5rem;
+}
+.about-title {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.about-sub {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.2em;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.about-blocks { display: flex; flex-direction: column; gap: 2.5rem; }
+.about-block-label {
+  font-family: var(--mono);
+  font-size: 0.58rem; letter-spacing: 0.25em;
+  color: var(--blue-star);
+  margin-bottom: 0.75rem;
+}
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  font-weight: 300;
+}
+.about-rule {
+  width: 32px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+  margin-bottom: 2.5rem;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid rgba(34,85,204,0.08);
+  padding: 0 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 4rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(34,85,204,0.06);
+}
+.footer-brand-logo {
+  font-family: var(--display);
+  font-size: 1.4rem; font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.footer-brand-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem; letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+.footer-brand-desc {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+  font-weight: 300;
+  max-width: 320px;
+}
+.footer-col-label {
+  font-family: var(--mono);
+  font-size: 0.55rem; letter-spacing: 0.25em;
+  color: var(--blue-bright);
+  margin-bottom: 1.25rem;
+}
+.footer-links {
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.footer-links button {
+  font-family: var(--mono);
+  font-size: 0.62rem; letter-spacing: 0.12em;
+  color: var(--text-muted);
+  background: none; border: none;
+  padding: 0; cursor: pointer; text-align: left;
+  transition: color 0.15s;
+}
+.footer-links button:hover { color: var(--purple-bright); }
+.footer-meta {
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.footer-meta-item {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.footer-meta-item span {
+  color: var(--text-dim);
+  display: block;
+  margin-top: 0.15rem;
+}
+.footer-bottom {
+  padding: 1.5rem 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 0.52rem; letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+.footer-disclaimer {
+  font-family: var(--mono);
+  font-size: 0.52rem; letter-spacing: 0.1em;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* ─── SUBMIT FORM ─── */
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.submit-form input,
+.submit-form textarea,
+.submit-form select {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  background: rgba(34,85,204,0.05);
+  border: 1px solid rgba(34,85,204,0.2);
+  color: var(--text);
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+.submit-form input::placeholder,
+.submit-form textarea::placeholder { color: var(--text-muted); }
+.submit-form input:focus,
+.submit-form textarea:focus,
+.submit-form select:focus { border-color: var(--blue-glow); }
+.submit-form select { cursor: pointer; appearance: none; }
+.submit-form select option { background: var(--void2); }
+.submit-form textarea { resize: vertical; min-height: 100px; }
+.submit-form-row { display: flex; gap: 0.75rem; }
+.submit-form-row > * { flex: 1; }
+.submit-status {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  padding: 10px 14px;
+  display: none;
+}
+.submit-status.ok { color: var(--blue-star); border: 1px solid rgba(34,85,204,0.3); background: rgba(34,85,204,0.06); }
+.submit-status.err { color: var(--red-glow); border: 1px solid rgba(180,20,0,0.3); background: rgba(180,20,0,0.05); }
+
+/* ─── NEWSLETTER ─── */
+.newsletter-section {
+  border-top: 1px solid rgba(136,0,255,0.1);
+  padding: 3.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.newsletter-left { flex: 1; }
+.newsletter-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  color: var(--purple);
+  margin-bottom: 0.75rem;
+}
+.newsletter-heading {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+}
+.newsletter-right { flex: 2; }
+.newsletter-sub {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+.newsletter-form {
+  display: flex;
+  gap: 0;
+}
+.newsletter-form input {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  background: rgba(136,0,255,0.05);
+  border: 1px solid rgba(136,0,255,0.2);
+  border-right: none;
+  color: var(--text);
+  padding: 11px 16px;
+  outline: none;
+  flex: 1;
+  transition: border-color 0.15s;
+}
+.newsletter-form input::placeholder { color: var(--text-muted); }
+.newsletter-form input:focus { border-color: var(--purple-dim); }
+.newsletter-form button {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--white);
+  background: var(--purple-dim);
+  border: 1px solid var(--purple-dim);
+  padding: 11px 22px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: var(--purple); border-color: var(--purple); }
+.newsletter-note {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+/* ─── SHARE ─── */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(34,85,204,0.12);
+}
+.share-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+.share-btn {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  padding: 7px 14px;
+  border: 1px solid rgba(34,85,204,0.25);
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.share-btn:hover { color: var(--blue-star); border-color: var(--blue-glow); background: rgba(34,85,204,0.08); }
+.share-btn.copied { color: var(--purple-bright); border-color: var(--purple-dim); }
+
+@media (max-width: 900px) {
+  .newsletter-section { flex-direction: column; gap: 2rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { border-right: 1px solid rgba(136,0,255,0.2); border-bottom: none; }
+  .newsletter-form button { border-top: none; }
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-content > * { animation: fadeUp 0.9s ease both; }
+.hero-eyebrow  { animation-delay: 0.1s; }
+.hero-logo     { animation-delay: 0.25s; }
+.hero-rule     { animation-delay: 0.4s; }
+.hero-tagline  { animation-delay: 0.52s; }
+
+@media (max-width: 900px) {
+  .featured { grid-template-columns: 1fr; }
+  .featured-mark { min-height: 220px; border-right: none; border-bottom: 1px solid rgba(34,85,204,0.12); }
+  .post-grid { grid-template-columns: 1fr 1fr; }
+  .hero-content, .main, .submit-section, .about-inner, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .nav-strip { padding: 0 1.5rem; }
+  .submit-section { flex-direction: column; gap: 2rem; }
+  .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .nav-tags { display: none; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="blog-view" id="blogView">
+
+  <section class="hero">
+    <div class="hero-bg">
+
+      <!-- bg watermark: inverted triangle -->
+      <svg class="hero-vmark" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+  <line x1="30"  y1="10" x2="300" y2="430" stroke="#aa44ff" stroke-width="2"/>
+  <line x1="570" y1="10" x2="300" y2="430" stroke="#6600cc" stroke-width="2"/>
+  <line x1="30"  y1="10" x2="570" y2="10"  stroke="#aa44ff" stroke-width="1"/>
+  <line x1="300" y1="10" x2="300" y2="430" stroke="#7722cc" stroke-width="1" opacity="0.5"/>
+  <line x1="30"  y1="200" x2="570" y2="200" stroke="#aa44ff" stroke-width="3"/>
+  <line x1="30"  y1="200" x2="570" y2="200" stroke="#ffffff" stroke-width="1.2" opacity="0.5"/>
+</svg>
+
+      <!-- lightning + galaxy streaks -->
+      <svg class="hero-fx" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+        <!-- blue star streaks (galaxy feel) -->
+        <line x1="0" y1="280" x2="200" y2="275" stroke="#4488ff" stroke-width="0.5" opacity="0.12"/>
+        <line x1="0" y1="320" x2="140" y2="318" stroke="#2255cc" stroke-width="0.3" opacity="0.1"/>
+        <line x1="1000" y1="180" x2="1200" y2="176" stroke="#4488ff" stroke-width="0.5" opacity="0.12"/>
+        <line x1="1050" y1="350" x2="1200" y2="347" stroke="#2255cc" stroke-width="0.4" opacity="0.1"/>
+        <!-- red lightning left -->
+        <polyline points="70,0 55,160 78,160 42,380 68,380 25,650"
+          fill="none" stroke="#8b0000" stroke-width="0.8" opacity="0.2" stroke-linejoin="round"/>
+        <polyline points="70,0 60,140 76,140 48,340"
+          fill="none" stroke="#cc2200" stroke-width="0.4" opacity="0.12" stroke-linejoin="round"/>
+        <!-- red lightning right -->
+        <polyline points="1130,80 1148,260 1122,260 1155,480 1128,480 1160,720"
+          fill="none" stroke="#8b0000" stroke-width="0.8" opacity="0.15" stroke-linejoin="round"/>
+        <!-- blue lightning mid-right -->
+        <polyline points="880,0 868,200 890,200 872,420"
+          fill="none" stroke="#1a3a99" stroke-width="0.6" opacity="0.15" stroke-linejoin="round"/>
+        <!-- blue star dots -->
+        <circle cx="180" cy="120" r="1" fill="#4488ff" opacity="0.4"/>
+        <circle cx="340" cy="80"  r="0.7" fill="#6699ff" opacity="0.35"/>
+        <circle cx="820" cy="140" r="1.2" fill="#4488ff" opacity="0.3"/>
+        <circle cx="960" cy="60"  r="0.8" fill="#88aaff" opacity="0.4"/>
+        <circle cx="1100" cy="220" r="1" fill="#4488ff" opacity="0.3"/>
+        <circle cx="420" cy="50"  r="0.6" fill="#aabbff" opacity="0.3"/>
+        <circle cx="650" cy="30"  r="1"   fill="#6688ff" opacity="0.35"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">transmission active</div>
+      <div class="hero-logo">
+        <div class="hero-mark">
+          <svg width="72" height="68" viewBox="0 0 220 200" style="background:transparent;">
+  <line x1="10"  y1="5"   x2="110" y2="190" stroke="#cc66ff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="210" y1="5"   x2="110" y2="190" stroke="#9933ee" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="10"  y1="5"   x2="210" y2="5"   stroke="#cc66ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="5"   x2="110" y2="190" stroke="#551199" stroke-width="1"   opacity="0.5"/>
+  <line x1="0"   y1="90"  x2="220" y2="90"  stroke="#ffffff" stroke-width="1.2" opacity="0.6"/>
+  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#cc66ff" stroke-width="2.5"/>
+  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#ffffff" stroke-width="0.8" opacity="0.7"/>
+</svg>
+        </div>
+        <div class="hero-wordmark">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</div>
+      </div>
+      <div class="hero-rule"></div>
+      <div class="hero-tagline">// knowledge they forgot to give you.<br>no credentials. no paywalls. just correct.</div>
+    </div>
+    <div class="hero-scroll">scroll</div>
+  </section>
+
+  <nav class="nav-strip">
+    <div class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</div>
+    <div class="nav-tags">
+      <button class="nav-tag active" onclick="filter('all',this)">ALL</button>
+      <button class="nav-tag" onclick="filter('electrical',this)">ELECTRICAL</button>
+      <button class="nav-tag" onclick="filter('legal',this)">LEGAL</button>
+      <button class="nav-tag" onclick="filter('health',this)">HEALTH</button>
+      <button class="nav-tag" onclick="filter('home',this)">HOME</button>
+      <button class="nav-tag" onclick="filter('finance',this)">FINANCE</button>
+      <button class="nav-tag" onclick="filter('survival',this)">SURVIVAL</button>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <div class="featured" id="featuredCard" onclick="openPost(0)">
+      <div class="featured-mark">
+        <svg width="140" height="132" viewBox="0 0 220 200" style="background:transparent;">
+  <line x1="10"  y1="5"   x2="110" y2="190" stroke="#cc66ff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="210" y1="5"   x2="110" y2="190" stroke="#9933ee" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="10"  y1="5"   x2="210" y2="5"   stroke="#cc66ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="5"   x2="110" y2="190" stroke="#551199" stroke-width="1"   opacity="0.5"/>
+  <line x1="0"   y1="90"  x2="220" y2="90"  stroke="#ffffff" stroke-width="1.2" opacity="0.6"/>
+  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#cc66ff" stroke-width="2.5"/>
+  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#ffffff" stroke-width="0.8" opacity="0.7"/>
+</svg>
+      </div>
+      <div class="featured-body">
+        <div>
+          <div class="featured-badge" id="featuredBadge">ELECTRICAL</div>
+          <div class="featured-title" id="featuredTitle">Ribbed = hot. Smooth = neutral. Know this before you touch a wire.</div>
+          <div class="featured-excerpt" id="featuredExcerpt">On a standard lamp cord, the ribbed wire carries the hot current and the smooth wire is neutral. Nobody tells you this. Electricians know it in their sleep. You almost definitely don't.</div>
+        </div>
+        <div class="featured-footer">
+          <span class="featured-date">2025.04.06</span>
+          <button class="read-btn">READ ENTRY →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-label">// all_entries</span>
+      <div class="section-rule"></div>
+      <span class="section-count" id="postCount">5 entries</span>
+    </div>
+
+    <div class="post-grid" id="postGrid"></div>
+
+  </main>
+
+  <div class="submit-section">
+    <div class="submit-left">
+      <div class="submit-num">∅+1</div>
+      <div class="submit-label">// submit_entry</div>
+    </div>
+    <div class="submit-right">
+      <div class="submit-heading">Know something people should know?</div>
+      <div class="submit-body">No byline required. No credentials. If it's correct and you can cite it, it belongs here. Include a primary source — NEC code, case law, federal ruling, manufacturer docs.</div>
+      <form class="submit-form" id="submitForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="submit-form-row">
+          <input type="text" name="title" placeholder="ENTRY TITLE / HOOK" required>
+          <select name="category">
+            <option value="" disabled selected>CATEGORY</option>
+            <option value="electrical">ELECTRICAL</option>
+            <option value="legal">LEGAL</option>
+            <option value="health">HEALTH</option>
+            <option value="home">HOME</option>
+            <option value="finance">FINANCE</option>
+            <option value="survival">SURVIVAL</option>
+            <option value="other">OTHER</option>
+          </select>
+        </div>
+        <textarea name="content" placeholder="THE ENTRY — what people don't know, why it matters, what to do about it" required></textarea>
+        <input type="text" name="source" placeholder="PRIMARY SOURCE — link or citation (required)" required>
+        <input type="email" name="email" placeholder="EMAIL (optional — only if you want a reply)">
+        <button type="submit" class="submit-btn">SUBMIT_ENTRY →</button>
+        <div class="submit-status" id="submitStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="newsletter-section">
+    <div class="newsletter-left">
+      <div class="newsletter-label">// new_entries</div>
+      <div class="newsletter-heading">GET THE<br>NEXT ONE</div>
+    </div>
+    <div class="newsletter-right">
+      <p class="newsletter-sub">No pitch. No roundup. When a new entry goes up — one email, the entry, nothing else.</p>
+      <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME" method="post" target="_blank">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit">SUBSCRIBE →</button>
+      </form>
+      <p class="newsletter-note">// no tracking. unsubscribe any time. we don't sell anything.</p>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="about-left-eyebrow">// about</div>
+        <div class="about-rule"></div>
+        <div class="about-title">THE<br>RECORD</div>
+        <div class="about-sub">INFORMATION THAT EXISTS<br>EVERYWHERE EXCEPT<br>WHERE IT SHOULD</div>
+      </div>
+      <div class="about-blocks">
+        <div>
+          <div class="about-block-label">// what this is</div>
+          <p class="about-text">V0IDL1NE is a public record of practical information that lives in technical manuals, legal codes, and professional training — but never makes it to the people who actually need it. No paywall. No login. No credentials required to read it.</p>
+        </div>
+        <div>
+          <div class="about-block-label">// how entries are verified</div>
+          <p class="about-text">Every entry is checked against primary sources before it goes up — NEC electrical code, federal and state case law, CFPB rulings, peer-reviewed literature, manufacturer documentation. If we can't cite it, it doesn't run. If we get something wrong, it comes down. The bar is correctness, not credentials.</p>
+        </div>
+        <div>
+          <div class="about-block-label">// who we are</div>
+          <p class="about-text">Anonymous. Not experts — people who kept running into the gap between what specialists know and what everyone else is allowed to know. The goal is narrow: put the information in plain language and leave it where anyone can find it.</p>
+        </div>
+        <div>
+          <div class="about-block-label">// one thing</div>
+          <p class="about-text">Nothing here is professional advice. We are not your doctor, lawyer, or electrician. Verify before you act. The entries are correct — but correct information applied to the wrong situation is still a mistake.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</div>
+        <div class="footer-brand-tag">// PUBLIC.RECORD</div>
+        <div class="footer-brand-desc">Knowledge they forgot to give you. No byline required. No paywalls. No credentials. Just correct.</div>
+      </div>
+      <div>
+        <div class="footer-col-label">// categories</div>
+        <div class="footer-links">
+          <button onclick="filter('electrical',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">ELECTRICAL</button>
+          <button onclick="filter('legal',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">LEGAL</button>
+          <button onclick="filter('health',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">HEALTH</button>
+          <button onclick="filter('home',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">HOME</button>
+          <button onclick="filter('finance',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">FINANCE</button>
+          <button onclick="filter('survival',null);document.querySelector('.main').scrollIntoView({behavior:'smooth'})">SURVIVAL</button>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">// the record</div>
+        <div class="footer-meta">
+          <div class="footer-meta-item">ENTRIES PUBLISHED<span>6 and counting</span></div>
+          <div class="footer-meta-item">LAST UPDATED<span>2025.04.06</span></div>
+          <div class="footer-meta-item">RIGHTS<span>None reserved. Copy freely.</span></div>
+          <div class="footer-meta-item">CORRECTIONS<span>Submit via entry form</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">// V0IDL1NE — PUBLIC.RECORD — NO_RIGHTS_RESERVED</div>
+      <div class="footer-disclaimer">not professional advice — verify before you act on anything here</div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- SINGLE POST -->
+<div class="post-view" id="postView">
+  <nav class="nav-strip">
+    <div class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</div>
+    <button class="back" onclick="closePost()">← BACK</button>
+  </nav>
+  <div class="post-full" id="postContent"></div>
+</div>
+
+<script>
+const posts = [
+  { id:0, cat:"ELECTRICAL", date:"2025.04.06", filter:"electrical",
+    title:"Ribbed = hot. Smooth = neutral. Know this before you touch a wire.",
+    excerpt:"On a standard lamp cord, the ribbed wire carries the hot current and the smooth wire is neutral. Nobody tells you this. Electricians know it in their sleep. You almost definitely don't.",
+    body:`<h2>The Basics Nobody Told You</h2>
+      <p>When you're dealing with a standard two-conductor lamp cord (SPT-2 or similar), the two wires look almost identical — except one has a ridged/ribbed texture and one is smooth. That's not a manufacturing quirk. That's a code-required safety marking.</p>
+      <div class="callout"><strong>// THE RULE</strong>RIBBED = HOT (black in standard wiring)<br>SMOOTH = NEUTRAL (white in standard wiring)<br>Green or bare = GROUND (not always present in lamp cord)</div>
+      <h2>Why It Matters</h2>
+      <p>Wire a lamp socket backwards and the socket shell stays energized even when the switch is off. Touch the shell while swapping a bulb and you're completing a circuit through your body.</p>
+      <p>Hot goes to the <code>gold/brass screw</code>, neutral to the <code>silver screw</code>. Ribbed to brass — B and R, both rough. Smooth to silver — both S.</p>
+      <div class="warn-block"><strong>// HEADS UP</strong>This only applies to polarized cords. A polarized plug has one blade wider than the other — wider is neutral, narrow is hot.</div>
+      <h2>Where This Comes Up</h2>
+      <p>Rewiring a lamp. Replacing a socket. Extending a cord. A non-contact voltage tester costs $15. Get one. But when you can't test, read the wire.</p>`
+  },
+  { id:1, cat:"LEGAL", date:"2025.04.05", filter:"legal",
+    title:"You have the right to record police in public. In all 50 states.",
+    excerpt:"Filming law enforcement in a public space is constitutionally protected. They cannot legally order you to stop. Upheld in every federal circuit court that has addressed it.",
+    body:`<h2>The Legal Foundation</h2>
+      <p>The First Amendment protects the right to gather information about government officials performing their duties in public. Every federal circuit court that has addressed this has held that filming police in public is a protected constitutional right.</p>
+      <div class="callout"><strong>// THE RIGHT</strong>You may film police in any public space where you are legally allowed to be. You may not be ordered to stop simply because you are filming. Officers cannot legally seize or destroy your phone.</div>
+      <h2>What They Can and Cannot Do</h2>
+      <p>Police can order you to move if you are physically obstructing their work. "Step back" is legal. "Stop recording" is not, in public.</p>
+      <p><em>Riley v. California</em> (2014) — unanimous Supreme Court — held that police need a warrant to search a phone's digital contents. You do not have to unlock it.</p>
+      <div class="warn-block"><strong>// KNOW THE LIMITS</strong>Some states have two-party consent laws for audio. These typically apply to private conversations, not police acting in official capacity in public — but know your state.</div>`
+  },
+  { id:2, cat:"HEALTH", date:"2025.04.04", filter:"health",
+    title:"You can decline any medical procedure. Even in an emergency room.",
+    excerpt:"Informed consent is a legal right. You can say no to any treatment, test, or medication — even if a doctor says you need it. Even if you're in a hospital bed.",
+    body:`<h2>What Informed Consent Actually Means</h2>
+      <p>Every competent adult has the legal right to refuse medical treatment — including life-saving treatment. Grounded in bodily autonomy, recognized across U.S. law and international standards.</p>
+      <div class="callout"><strong>// THE RIGHT</strong>You can refuse any treatment at any time, for any reason. Signing an intake form is not blanket consent to everything they want to do.</div>
+      <h2>What Informed Actually Requires</h2>
+      <p>Before consent is valid, a provider must explain: what the procedure is, the risks, the alternatives, and what happens if you do nothing. If they haven't done that, consent hasn't legally happened.</p>
+      <p>You are allowed to ask: <code>What are my alternatives?</code> <code>What happens if I don't?</code> Those are your legal right, not difficult-patient questions.</p>
+      <div class="warn-block"><strong>// EXCEPTIONS</strong>If you are unconscious, severely incapacitated, or a minor without a parent present, different rules apply. Once awake and coherent, your right to refuse returns.</div>`
+  },
+  { id:3, cat:"HOME", date:"2025.04.03", filter:"home",
+    title:"Your water heater has a sacrificial anode rod. Replace it or pay later.",
+    excerpt:"There's a magnesium rod inside your water heater that corrodes so the tank doesn't. Most people never touch it. That's why water heaters fail early.",
+    body:`<h2>What It Is</h2>
+      <p>Inside every conventional tank water heater is a long metal rod — typically magnesium or aluminum — that corrodes through electrochemical action, drawing corrosive minerals away from the steel tank walls.</p>
+      <div class="callout"><strong>// THE MATH</strong>Lifespan (rod never replaced): 8–12 years.<br>Lifespan (rod replaced every 3–5 years): 20+ years.<br>New rod: $20–$50. New heater: $500–$1,500+.</div>
+      <h2>How To Check It</h2>
+      <p>Cut power/gas and cold water supply. Find the hex bolt on top — use a <code>1-1/16" socket</code> and breaker bar. If it's thin, corroded to the wire core, or less than half original diameter, replace it.</p>
+      <div class="warn-block"><strong>// WATCH FOR</strong>Rotten egg smell from hot water = hydrogen sulfide from bacteria reacting with a magnesium rod. Switch to aluminum/zinc. The smell doesn't mean the heater is bad.</div>`
+  },
+  { id:4, cat:"FINANCE", date:"2025.04.02", filter:"finance",
+    title:"Medical debt under $500 cannot appear on your credit report.",
+    excerpt:"As of 2023, all three major bureaus removed medical debt under $500. Paid medical debt is also gone. Most people don't know this already happened.",
+    body:`<h2>What Changed</h2>
+      <p>In 2022–2023, Equifax, Experian, and TransUnion overhauled medical debt reporting in response to CFPB pressure and recognition that medical debt is a poor predictor of creditworthiness.</p>
+      <div class="callout"><strong>// THE CHANGES (2023)</strong>Medical debt under $500 removed from all three major reports.<br>Paid medical debt removed (previously stayed 7 years).<br>Unpaid debt reporting window extended from 6 months to 1 year.</div>
+      <h2>What This Means For You</h2>
+      <p>Paid medical collections on your report? Dispute them — they should be gone. Pull your reports free at <code>AnnualCreditReport.com</code> — the only federally authorized source.</p>
+      <div class="warn-block"><strong>// NOT FIXED YET</strong>A formal rule banning all medical debt from reports has been proposed but not finalized as of early 2025. Current changes are bureau policy, not law. Document disputes and get written confirmation.</div>`
+  },
+  { id:5, cat:"SURVIVAL", date:"2025.04.01", filter:"survival",
+    title:"Cold water is more dangerous than cold air. Here's why.",
+    excerpt:"Water conducts heat 25x faster than air. Most cold water deaths happen before the person ever goes under — not from drowning, but from cold shock and muscle failure.",
+    body:`<h2>The Timeline Nobody Knows</h2>
+      <p>Cold water kills through a predictable sequence. By the time hypothermia is a factor, you've already survived the parts that kill most people.</p>
+      <div class="callout"><strong>// THE 1-10-1 PRINCIPLE</strong>1 minute: Cold shock — gasping, hyperventilation. Control your breathing. Most deaths happen here.<br><br>10 minutes: Swimming failure — muscles useless. Get horizontal. Float. Get on something.<br><br>1 hour: Unconsciousness from hypothermia. This is when drowning happens.</div>
+      <h2>What To Do</h2>
+      <p>Don't thrash — it accelerates heat loss. Don't swim aggressively unless shore is within 30–50 yards. Float on your back and control your breathing.</p>
+      <div class="warn-block"><strong>// CRITICAL: AFTERDROP</strong>Core temperature continues dropping after removal from cold water as cold blood recirculates from extremities. Can cause cardiac arrest 30+ minutes after rescue. Keep them horizontal, keep them warm, get EMS.</div>`
+  }
+];
+
+let activeFilter = 'all';
+
+function renderGrid() {
+  const grid = document.getElementById('postGrid');
+  const rest = posts.slice(1);
+  const filtered = activeFilter === 'all' ? rest : rest.filter(p => p.filter === activeFilter);
+  document.getElementById('postCount').textContent = filtered.length + ' entries';
+  document.getElementById('featuredCard').style.display =
+    (activeFilter === 'all' || posts[0].filter === activeFilter) ? '' : 'none';
+  grid.innerHTML = filtered.map((p, i) => `
+    <div class="post-card" onclick="openPost(${p.id})">
+      <div class="post-num">0${i+1}</div>
+      <div class="post-cat">${p.cat}</div>
+      <div class="post-title">${p.title}</div>
+      <div class="post-excerpt">${p.excerpt}</div>
+      <div class="post-meta"><span>${p.date}</span><span class="post-meta-arrow">→</span></div>
+    </div>`).join('');
+}
+
+function filter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.nav-tag').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  renderGrid();
+}
+
+function openPost(id) {
+  const p = posts.find(x => x.id === id);
+  if (!p) return;
+  const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const url = `${location.origin}${location.pathname}#${slug}`;
+  const tweetText = encodeURIComponent(`${p.title} — ${url}`);
+  document.getElementById('blogView').classList.add('hidden');
+  document.getElementById('postView').classList.add('open');
+  document.getElementById('postContent').innerHTML = `
+    <div class="post-full-eyebrow">${p.cat} // ${p.date}</div>
+    <h1 class="post-full-title">${p.title}</h1>
+    <div class="post-full-meta">V0IDL1NE — PUBLIC.RECORD — NO_CREDENTIALS_REQUIRED</div>
+    <div class="post-body">${p.body}</div>
+    <div class="share-bar">
+      <span class="share-label">// share</span>
+      <button class="share-btn" onclick="copyLink('${url}', this)">COPY LINK</button>
+      <button class="share-btn" onclick="window.open('https://x.com/intent/tweet?text=${tweetText}','_blank')">POST ON X</button>
+      <button class="share-btn" onclick="window.open('https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(p.title)}','_blank')">POST TO REDDIT</button>
+    </div>`;
+  window.scrollTo(0,0);
+}
+
+function copyLink(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    btn.textContent = 'COPIED';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY LINK'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function closePost() {
+  document.getElementById('blogView').classList.remove('hidden');
+  document.getElementById('postView').classList.remove('open');
+  window.scrollTo(0,0);
+}
+
+// Formspree AJAX submit
+const submitForm = document.getElementById('submitForm');
+if (submitForm) {
+  submitForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = submitForm.querySelector('button[type=submit]');
+    const status = document.getElementById('submitStatus');
+    btn.textContent = 'SENDING...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(submitForm.action, {
+        method: 'POST',
+        body: new FormData(submitForm),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        status.textContent = '// RECEIVED — will verify against primary sources before publishing';
+        status.className = 'submit-status ok';
+        status.style.display = 'block';
+        submitForm.reset();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      status.textContent = '// ERROR — try again or email directly';
+      status.className = 'submit-status err';
+      status.style.display = 'block';
+    }
+    btn.textContent = 'SUBMIT_ENTRY →';
+    btn.disabled = false;
+  });
+}
+
+renderGrid();
+</script>
+</body>
+</html>
