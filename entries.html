@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V0IDL1NE — All Entries</title>
+<meta name="description" content="Full archive. All entries. Every category. No gatekeeping.">
+<meta property="og:title" content="V0IDL1NE — All Entries">
+<meta property="og:description" content="Full archive. All entries. Every category. No gatekeeping.">
+<meta property="og:image" content="https://v0idl1ne.com/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://v0idl1ne.com/entries">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #04040c; --void2: #07071a; --void3: #0a0a1e;
+  --purple: #8800ff; --purple-dim: #440088; --purple-bright: #aa44ff;
+  --red-bright: #bb1a00; --red-glow: #ee3300;
+  --blue: #050d2e; --blue-mid: #0a1a55; --blue-bright: #1a3a99;
+  --blue-glow: #2255cc; --blue-star: #4488ff;
+  --white: #f0eaf8; --text: #c0b8d8; --text-dim: #60567a; --text-muted: #2a2040;
+  --mono: 'Share Tech Mono', monospace;
+  --display: 'Barlow Condensed', sans-serif;
+  --body: 'Barlow', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--void); color: var(--text); font-family: var(--body); min-height: 100vh; cursor: crosshair; }
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.06) 2px, rgba(0,0,0,0.06) 4px);
+  pointer-events: none; z-index: 1000;
+}
+
+/* NAV */
+.nav-strip {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(4,4,12,0.97); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(34,85,204,0.2);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4rem; height: 52px;
+}
+.nav-strip::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, var(--red-bright), var(--blue-glow), transparent);
+}
+.nav-logo { font-family: var(--display); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.12em; color: var(--white); text-decoration: none; }
+.acc-p { color: var(--purple-bright); }
+.acc-r { color: var(--red-glow); }
+.nav-right { display: flex; align-items: center; height: 100%; }
+.nav-tags { display: flex; height: 100%; }
+.nav-tag {
+  font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.15em;
+  color: var(--text-muted); padding: 0 0.9rem; cursor: pointer;
+  border: none; background: none; height: 100%; display: flex; align-items: center;
+  transition: all 0.15s; border-bottom: 2px solid transparent; position: relative; top: 1px;
+}
+.nav-tag:hover { color: var(--blue-star); }
+.nav-tag.active { color: var(--purple-bright); border-bottom-color: var(--purple); }
+.nav-back {
+  font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.15em;
+  color: var(--text-muted); text-decoration: none; padding: 0 1.25rem;
+  border-left: 1px solid rgba(34,85,204,0.15); height: 100%;
+  display: flex; align-items: center; transition: color 0.15s;
+}
+.nav-back:hover { color: var(--blue-star); }
+
+/* PAGE HERO */
+.page-hero {
+  padding: 4rem 4rem 2.5rem; max-width: 1200px; margin: 0 auto;
+  border-bottom: 1px solid rgba(34,85,204,0.1); position: relative;
+}
+.page-hero::before {
+  content: ''; position: absolute; bottom: 0; left: 4rem;
+  width: 100px; height: 1px;
+  background: linear-gradient(90deg, var(--red-bright), var(--blue-glow));
+}
+.page-eyebrow {
+  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.3em;
+  color: var(--blue-bright); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.page-eyebrow::before { content: ''; display: block; width: 30px; height: 1px; background: linear-gradient(90deg, var(--red-bright), var(--blue-glow)); }
+.page-title { font-family: var(--display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 900; line-height: 0.9; color: var(--white); }
+
+/* MAIN */
+.main { max-width: 1200px; margin: 0 auto; padding: 4rem; }
+
+/* SECTION HEADER */
+.section-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; }
+.section-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.3em; color: var(--text-muted); }
+.section-rule { flex: 1; height: 1px; background: linear-gradient(90deg, var(--red-bright) 0%, var(--purple) 20%, var(--blue-glow) 50%, transparent 80%); }
+.section-count { font-family: var(--mono); font-size: 0.6rem; color: var(--blue-bright); }
+
+/* POST GRID */
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(34,85,204,0.07); margin-bottom: 4rem; }
+.post-card {
+  background: var(--void); padding: 2rem; cursor: pointer;
+  transition: background 0.2s; display: flex; flex-direction: column;
+  min-height: 260px; position: relative; overflow: hidden;
+}
+.post-card:hover { background: linear-gradient(160deg, var(--void2) 0%, rgba(5,13,46,0.6) 100%); }
+.post-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--red-bright), var(--purple), var(--blue-star));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
+}
+.post-card:hover::after { transform: scaleX(1); }
+.post-num { font-family: var(--mono); font-size: 2.5rem; color: var(--text-muted); line-height: 1; margin-bottom: 1.25rem; letter-spacing: -0.05em; }
+.post-cat { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.2em; margin-bottom: 0.75rem; color: var(--purple-bright); }
+.post-card:nth-child(3n+1) .post-cat { color: var(--purple-bright); }
+.post-card:nth-child(3n+2) .post-cat { color: var(--blue-star); }
+.post-card:nth-child(3n+3) .post-cat { color: var(--red-glow); }
+.post-title { font-family: var(--display); font-size: 1.2rem; font-weight: 700; line-height: 1.2; color: var(--white); margin-bottom: 0.75rem; flex: 1; }
+.post-excerpt { font-size: 0.78rem; line-height: 1.7; color: var(--text-dim); font-weight: 300; margin-bottom: 1.25rem; }
+.post-meta { font-family: var(--mono); font-size: 0.58rem; color: var(--text-muted); letter-spacing: 0.12em; display: flex; align-items: center; justify-content: space-between; }
+.post-meta-arrow { color: var(--blue-bright); transition: color 0.15s; }
+.post-card:hover .post-meta-arrow { color: var(--blue-star); }
+
+/* POST VIEW */
+.post-view { display: none; }
+.post-view.open { display: block; }
+.entries-view.hidden { display: none; }
+.post-full { max-width: 720px; margin: 0 auto; padding: 5rem 4rem; }
+.back {
+  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em;
+  color: var(--text-dim); background: none; border: 1px solid rgba(34,85,204,0.2);
+  padding: 8px 18px; cursor: pointer; margin-bottom: 3rem;
+  display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.15s;
+}
+.back:hover { color: var(--blue-star); border-color: var(--blue-glow); }
+.post-full-eyebrow { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.25em; color: var(--blue-star); margin-bottom: 1rem; }
+.post-full-title { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 1rem; }
+.post-full-meta { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--text-muted); padding: 1.5rem 0; border-top: 1px solid rgba(180,20,0,0.15); border-bottom: 1px solid rgba(34,85,204,0.15); margin-bottom: 3rem; }
+.post-body h2 { font-family: var(--display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3em; color: var(--blue-star); text-transform: uppercase; margin: 2.5rem 0 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.post-body h2::before { content: ''; display: inline-block; width: 14px; height: 1px; background: linear-gradient(90deg, var(--red-bright), var(--blue-glow)); }
+.post-body p { font-size: 1rem; line-height: 1.85; color: var(--text); font-weight: 300; margin-bottom: 1.25rem; }
+.callout { border-left: 2px solid var(--blue-glow); padding: 1.25rem 1.5rem; margin: 2rem 0; background: rgba(34,85,204,0.06); font-family: var(--mono); font-size: 0.8rem; line-height: 1.8; color: var(--text); }
+.callout strong { display: block; font-size: 0.62rem; letter-spacing: 0.25em; color: var(--blue-star); margin-bottom: 0.6rem; }
+.warn-block { border-left: 2px solid var(--red-bright); padding: 1.25rem 1.5rem; margin: 2rem 0; background: rgba(180,20,0,0.05); font-family: var(--mono); font-size: 0.8rem; line-height: 1.8; color: var(--text); }
+.warn-block strong { display: block; font-size: 0.62rem; letter-spacing: 0.25em; color: var(--red-glow); margin-bottom: 0.6rem; }
+code { font-family: var(--mono); font-size: 0.85em; color: var(--blue-star); background: rgba(34,85,204,0.1); padding: 1px 6px; }
+.share-bar { display: flex; align-items: center; gap: 0.75rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(34,85,204,0.12); }
+.share-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.2em; color: var(--text-muted); margin-right: 0.5rem; }
+.share-btn { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; padding: 7px 14px; border: 1px solid rgba(34,85,204,0.25); background: none; color: var(--text-dim); cursor: pointer; transition: all 0.15s; }
+.share-btn:hover { color: var(--blue-star); border-color: var(--blue-glow); background: rgba(34,85,204,0.08); }
+.share-btn.copied { color: var(--purple-bright); border-color: var(--purple-dim); }
+
+footer { border-top: 1px solid rgba(34,85,204,0.08); padding: 2rem 4rem; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.footer-copy { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.15em; color: var(--text-muted); }
+.footer-link { font-family: var(--mono); font-size: 0.52rem; letter-spacing: 0.15em; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+.footer-link:hover { color: var(--purple-bright); }
+
+@media (max-width: 900px) {
+  .post-grid { grid-template-columns: 1fr 1fr; }
+  .nav-strip, .page-hero, .main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .post-full { padding: 3rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .nav-tags { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="entries-view" id="entriesView">
+  <nav class="nav-strip">
+    <a href="index.html" class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</a>
+    <div class="nav-right">
+      <div class="nav-tags">
+        <button class="nav-tag active" onclick="filter('all',this)">ALL</button>
+        <button class="nav-tag" onclick="filter('electrical',this)">ELECTRICAL</button>
+        <button class="nav-tag" onclick="filter('legal',this)">LEGAL</button>
+        <button class="nav-tag" onclick="filter('health',this)">HEALTH</button>
+        <button class="nav-tag" onclick="filter('home',this)">HOME</button>
+        <button class="nav-tag" onclick="filter('finance',this)">FINANCE</button>
+        <button class="nav-tag" onclick="filter('survival',this)">SURVIVAL</button>
+        <button class="nav-tag" onclick="filter('digital',this)">DIGITAL</button>
+        <button class="nav-tag" onclick="filter('automotive',this)">AUTOMOTIVE</button>
+        <button class="nav-tag" onclick="filter('plumbing',this)">PLUMBING</button>
+      </div>
+      <a href="index.html" class="nav-back">← HOME</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-eyebrow">// full_archive</div>
+    <div class="page-title">ALL<br>ENTRIES</div>
+  </div>
+
+  <main class="main">
+    <div class="section-header">
+      <span class="section-label">// all_entries</span>
+      <div class="section-rule"></div>
+      <span class="section-count" id="postCount">32 entries</span>
+    </div>
+    <div class="post-grid" id="postGrid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-copy">// V0IDL1NE — PUBLIC.RECORD — NO_RIGHTS_RESERVED</div>
+    <a href="index.html" class="footer-link">← back to home</a>
+  </footer>
+</div>
+
+<!-- SINGLE POST VIEW -->
+<div class="post-view" id="postView">
+  <nav class="nav-strip">
+    <a href="index.html" class="nav-logo">V<span class="acc-p">0</span>IDL<span class="acc-r">1</span>NE</a>
+    <button class="back" onclick="closePost()">← ALL ENTRIES</button>
+  </nav>
+  <div class="post-full" id="postContent"></div>
+</div>
+
+<script src="posts.js"></script>
+<script>
+let activeFilter = 'all';
+
+function renderGrid() {
+  const grid = document.getElementById('postGrid');
+  const filtered = activeFilter === 'all' ? posts : posts.filter(p => p.filter === activeFilter);
+  document.getElementById('postCount').textContent = filtered.length + ' entries';
+  grid.innerHTML = filtered.map((p, i) => `
+    <div class="post-card" onclick="openPost(${p.id})">
+      <div class="post-num">${String(i+1).padStart(2,'0')}</div>
+      <div class="post-cat">${p.cat}</div>
+      <div class="post-title">${p.title}</div>
+      <div class="post-excerpt">${p.excerpt}</div>
+      <div class="post-meta"><span>${p.date}</span><span class="post-meta-arrow">→</span></div>
+    </div>`).join('');
+}
+
+function filter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.nav-tag').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  renderGrid();
+}
+
+function openPost(id) {
+  const p = posts.find(x => x.id === id);
+  if (!p) return;
+  const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const url = `${location.origin}${location.pathname}#${slug}`;
+  const tweetText = encodeURIComponent(`${p.title} — ${url}`);
+  document.getElementById('entriesView').classList.add('hidden');
+  document.getElementById('postView').classList.add('open');
+  document.getElementById('postContent').innerHTML = `
+    <div class="post-full-eyebrow">${p.cat} // ${p.date}</div>
+    <h1 class="post-full-title">${p.title}</h1>
+    <div class="post-full-meta">V0IDL1NE — PUBLIC.RECORD — NO_CREDENTIALS_REQUIRED</div>
+    <div class="post-body">${p.body}</div>
+    <div class="share-bar">
+      <span class="share-label">// share</span>
+      <button class="share-btn" onclick="copyLink('${url}', this)">COPY LINK</button>
+      <button class="share-btn" onclick="window.open('https://x.com/intent/tweet?text=${tweetText}','_blank')">POST ON X</button>
+      <button class="share-btn" onclick="window.open('https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(p.title)}','_blank')">POST TO REDDIT</button>
+    </div>`;
+  window.scrollTo(0,0);
+}
+
+function copyLink(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    btn.textContent = 'COPIED';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY LINK'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function closePost() {
+  document.getElementById('entriesView').classList.remove('hidden');
+  document.getElementById('postView').classList.remove('open');
+  window.scrollTo(0,0);
+}
+
+renderGrid();
+</script>
+</body>
+</html>
