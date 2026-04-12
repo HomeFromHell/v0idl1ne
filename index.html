@@ -257,8 +257,7 @@ body::before {
 
 /* ─── FEATURED ─── */
 .featured {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: block;
   border: 1px solid rgba(34,85,204,0.15);
   margin-bottom: 5rem;
   cursor: pointer;
@@ -1065,25 +1064,14 @@ footer {
   <main class="main">
 
     <div class="featured" id="featuredCard" onclick="openPost(0)">
-      <div class="featured-mark">
-        <svg width="140" height="132" viewBox="0 0 220 200" style="background:transparent;">
-  <line x1="10"  y1="5"   x2="110" y2="190" stroke="#cc66ff" stroke-width="3" stroke-linecap="round"/>
-  <line x1="210" y1="5"   x2="110" y2="190" stroke="#9933ee" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="10"  y1="5"   x2="210" y2="5"   stroke="#cc66ff" stroke-width="2" stroke-linecap="round"/>
-  <line x1="110" y1="5"   x2="110" y2="190" stroke="#551199" stroke-width="1"   opacity="0.5"/>
-  <line x1="0"   y1="90"  x2="220" y2="90"  stroke="#ffffff" stroke-width="1.2" opacity="0.6"/>
-  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#cc66ff" stroke-width="2.5"/>
-  <line x1="38"  y1="90"  x2="182" y2="90"  stroke="#ffffff" stroke-width="0.8" opacity="0.7"/>
-</svg>
-      </div>
-      <div class="featured-body">
+      <div class="featured-body" style="width:100%">
         <div>
-          <div class="featured-badge" id="featuredBadge">ELECTRICAL</div>
-          <div class="featured-title" id="featuredTitle">Ribbed = hot. Smooth = neutral. Know this before you touch a wire.</div>
-          <div class="featured-excerpt" id="featuredExcerpt">On a standard lamp cord, the ribbed wire carries the hot current and the smooth wire is neutral. Nobody tells you this. Electricians know it in their sleep. You almost definitely don't.</div>
+          <div class="featured-badge" id="featuredBadge"></div>
+          <div class="featured-title" id="featuredTitle"></div>
+          <div class="featured-excerpt" id="featuredExcerpt"></div>
         </div>
         <div class="featured-footer">
-          <span class="featured-date">2025.04.06</span>
+          <span class="featured-date" id="featuredDate"></span>
           <button class="read-btn">READ ENTRY →</button>
         </div>
       </div>
@@ -1247,6 +1235,13 @@ footer {
 <script src="posts.js"></script>
 <script>
 // posts loaded from posts.js
+
+// populate featured card from posts array
+const fp = posts[0];
+document.getElementById('featuredBadge').textContent = fp.cat;
+document.getElementById('featuredTitle').textContent = fp.title;
+document.getElementById('featuredExcerpt').textContent = fp.excerpt;
+document.getElementById('featuredDate').textContent = fp.date;
 
 let activeFilter = 'all';
 
