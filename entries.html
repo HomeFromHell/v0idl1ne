@@ -243,6 +243,7 @@ function openPost(id) {
   if (!p) return;
   const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   const url = `${location.origin}${location.pathname}#${slug}`;
+  history.replaceState(null, '', '#' + slug);
   const tweetText = encodeURIComponent(`${p.title} — ${url}`);
   document.getElementById('entriesView').classList.add('hidden');
   document.getElementById('postView').classList.add('open');
@@ -269,12 +270,21 @@ function copyLink(url, btn) {
 }
 
 function closePost() {
+  history.replaceState(null, '', location.pathname);
   document.getElementById('entriesView').classList.remove('hidden');
   document.getElementById('postView').classList.remove('open');
   window.scrollTo(0,0);
 }
 
+// open the post named in the URL (#slug) so shared links land on it
+function openFromHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const p = h && posts.find(x => x.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') === h);
+  if (p) openPost(p.id);
+}
+
 renderGrid();
+openFromHash();
 </script>
 </body>
 </html>

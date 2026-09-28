@@ -821,6 +821,7 @@ function openGuide(id) {
   const g = guides.find(x => x.id === id);
   if (!g) return;
   const url = `${location.origin}${location.pathname}#guide-${id}`;
+  history.replaceState(null, '', '#guide-' + id);
   const tweetText = encodeURIComponent(`${g.title} — ${url}`);
   document.getElementById('guidesView').classList.add('hidden');
   document.getElementById('guideView').classList.add('open');
@@ -864,12 +865,17 @@ function copyLink(url, btn) {
 }
 
 function closeGuide() {
+  history.replaceState(null, '', location.pathname);
   document.getElementById('guidesView').classList.remove('hidden');
   document.getElementById('guideView').classList.remove('open');
   window.scrollTo(0,0);
 }
 
+// open the guide named in the URL (#guide-N) so shared links land on it
+const hashMatch = location.hash.match(/^#guide-(\d+)$/);
+
 renderGrid();
+if (hashMatch) openGuide(Number(hashMatch[1]));
 </script>
 </body>
 </html>

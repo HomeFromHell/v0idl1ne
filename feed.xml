@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>V0IDL1NE — Public Record</title>
+    <link>https://v0idl1ne.com/</link>
+    <atom:link href="https://v0idl1ne.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Knowledge they forgot to give you. No credentials. No paywalls. Just correct.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>You can carry a full sheet of drywall alone. Here's the balance point.</title>
+      <link>https://v0idl1ne.com/entries#you-can-carry-a-full-sheet-of-drywall-alone-here-s-the-balance-point</link>
+      <guid isPermaLink="false">v0idl1ne-entry-6</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>A 4x8 sheet of drywall weighs 50–70 lbs and acts like a sail. Most people fight it. If you find the balance point, it practically carries itself.</description>
+      <content:encoded><![CDATA[<h2>Why It Feels Impossible</h2>
+      <p>Drywall is awkward, not heavy. The problem is leverage — holding it flat or grabbing one end turns it into a lever working against you. The fix is simple: work with the physics instead of against them.</p>
+      <div class="callout"><strong>// THE METHOD</strong>Stand the sheet on its long edge (portrait). Lean it against your body at roughly chest height. Reach down and grip the bottom edge at the center — not the corner. Walk. The sheet balances across your forearm. Steer with your body, not your arms.</div>
+      <h2>Why It Works</h2>
+      <p>The balance point of a 4x8 sheet is dead center — 2 feet from either end, 2 feet from either side. When you grip the bottom at center and lean the top against your shoulder/chest, the sheet is balanced across a single point. You're not lifting it, you're just keeping it from tipping.</p>
+      <p>Your free hand can now open doors, move obstacles, or brace against walls. On stairs, lean it slightly more vertical and take it slow — same principle holds.</p>
+      <div class="warn-block"><strong>// WATCH FOR</strong>Wind. A full sheet in open air catches like a sail. On a jobsite or outside, have someone spot you or wait. Also watch doorframes — sheets are 4 feet wide, standard doors are 32–36 inches. You'll need to tip it diagonally through.</div>
+      <h2>For Half Sheets</h2>
+      <p>4x4 half sheets are easy alone either way. For odd cuts, just find the new center of the long edge and grip there. Same principle scales to any size.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Two search operators that make Google actually work.</title>
+      <link>https://v0idl1ne.com/entries#two-search-operators-that-make-google-actually-work</link>
+      <guid isPermaLink="false">v0idl1ne-entry-7</guid>
+      <category>DIGITAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Quotes and site: are built into every search engine and almost nobody uses them. They cut through SEO garbage and surface exactly what you're looking for.</description>
+      <content:encoded><![CDATA[<h2>The Operators</h2>
+      <p>Search engines support syntax called operators — special characters that modify how results are filtered. Most people type queries like they're texting. Two operators alone will change what search returns for you.</p>
+      <div class="callout"><strong>// OPERATOR 1: QUOTES ""</strong>Wrapping a phrase in quotes forces an exact match. The search engine returns only pages containing that exact string of words, in that order.<br><br>Without quotes: <code>circuit breaker keeps tripping</code> → millions of SEO articles<br>With quotes: <code>"circuit breaker keeps tripping"</code> → forum threads, actual people with actual problems</div>
+      <div class="callout"><strong>// OPERATOR 2: SITE:</strong><code>site:reddit.com circuit breaker keeps tripping</code> limits results to one domain. Combine with quotes and you're searching that site's content directly, better than most sites' own search.<br><br>Useful targets: <code>site:reddit.com</code> · <code>site:stackoverflow.com</code> · <code>site:gov</code> · <code>site:edu</code></div>
+      <h2>How To Combine Them</h2>
+      <p>They stack. <code>site:reddit.com "anode rod" water heater</code> returns Reddit threads where someone used that exact phrase. You skip every listicle and land in real conversation.</p>
+      <p>For legal or government info: <code>site:gov "tenant rights" Indiana</code> pulls official state and federal pages only. No legal-advice blogs, no ads, no paywalls.</p>
+      <div class="warn-block"><strong>// OTHER USEFUL ONES</strong><code>-word</code> excludes a term. <code>filetype:pdf</code> returns only PDFs — useful for manuals, code documents, research papers. <code>before:2020</code> and <code>after:2020</code> filter by date. These work on Google, Bing, and DuckDuckGo.</div>
+      <h2>When To Use This</h2>
+      <p>Any time the first page of results is all the same article rewritten 40 times. Any time you need a primary source. Any time you want real people's experience instead of optimized content. Which is most of the time.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Your water heater has a reset button. Check it before you call a plumber.</title>
+      <link>https://v0idl1ne.com/entries#your-water-heater-has-a-reset-button-check-it-before-you-call-a-plumber</link>
+      <guid isPermaLink="false">v0idl1ne-entry-8</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Most electric water heaters have a red reset button behind a side panel. It trips on high-temp overloads and won't reset itself. 30 seconds to check.</description>
+      <content:encoded><![CDATA[<h2>Where It Is</h2>
+      <p>Look for a metal access panel on the side of your electric water heater — usually held by two screws. Behind it is the thermostat and a red button. That's the high-limit reset.</p>
+      <div class="callout"><strong>// THE FIX</strong>Press the red reset button firmly until you feel it click. Restore power. Give it 30–60 minutes. If you have hot water again, the reset was the problem.</div>
+      <h2>Why It Trips</h2>
+      <p>The high-limit switch cuts power when water temp exceeds ~170°F. A one-time trip is usually fine. If it keeps tripping after reset, the thermostat or upper heating element is failing.</p>
+      <div class="warn-block"><strong>// BEFORE YOU TOUCH ANYTHING</strong>Cut power to the water heater at the breaker first. The reset button is low-voltage but the rest of the panel is not.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>A tripped GFCI cuts power to outlets in completely different rooms.</title>
+      <link>https://v0idl1ne.com/entries#a-tripped-gfci-cuts-power-to-outlets-in-completely-different-rooms</link>
+      <guid isPermaLink="false">v0idl1ne-entry-9</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>When a GFCI trips it kills everything wired downstream — which may be outlets nowhere near it. Before calling an electrician, find every GFCI in the building and hit reset.</description>
+      <content:encoded><![CDATA[<h2>How GFCI Circuits Work</h2>
+      <p>A GFCI outlet protects every standard outlet wired downstream from it on the same circuit. When it trips, all of those outlets go dead too. The dead outlet might be in the living room. The tripped GFCI might be in the garage.</p>
+      <div class="callout"><strong>// WHERE TO LOOK</strong>Bathrooms · Kitchen · Garage · Exterior outlets · Unfinished basement<br><br>Every GFCI has TEST and RESET buttons. If an outlet anywhere has no power and the breaker looks fine, go find them all and press RESET.</div>
+      <div class="warn-block"><strong>// IF IT WON'T STAY RESET</strong>A GFCI that keeps tripping has detected a real ground fault — current imbalance that could mean a damaged device, wet outlet, or wiring fault. Don't force it. Find the cause.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Tire pressure drops 1 PSI for every 10°F temperature drop. Your TPMS isn't broken.</title>
+      <link>https://v0idl1ne.com/entries#tire-pressure-drops-1-psi-for-every-10-f-temperature-drop-your-tpms-isn-t-broken</link>
+      <guid isPermaLink="false">v0idl1ne-entry-10</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Cold weather compresses air. The low-pressure light in January isn't a malfunction — it's physics. Use the door jamb sticker, not the tire sidewall.</description>
+      <content:encoded><![CDATA[<h2>The Physics</h2>
+      <p>Every 10°F drop in ambient temperature drops tire pressure by roughly 1 PSI. A 30-degree overnight drop can trigger your TPMS light on tires that were fine the day before.</p>
+      <div class="callout"><strong>// THE RIGHT PRESSURE</strong>Check your door jamb sticker (driver's side) — that's the manufacturer's target for your vehicle. The number on the tire sidewall is the MAX, not the target. Check when cold — not driven in at least 3 hours.</div>
+      <div class="warn-block"><strong>// TPMS IS NOT A GAUGE</strong>The light only tells you something is low — not how low or which tire. Check all four manually when it comes on.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>The P-trap under your sink can dry out and let sewer gas into your home.</title>
+      <link>https://v0idl1ne.com/entries#the-p-trap-under-your-sink-can-dry-out-and-let-sewer-gas-into-your-home</link>
+      <guid isPermaLink="false">v0idl1ne-entry-11</guid>
+      <category>PLUMBING</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>That U-shaped pipe holds water to seal out methane and hydrogen sulfide. Leave a drain unused for weeks and the water evaporates. Fix: run the tap 30 seconds.</description>
+      <content:encoded><![CDATA[<h2>What the P-trap Does</h2>
+      <p>Every drain has a P-trap — a U-shaped pipe that stays filled with water. That water is the only barrier between your living space and sewer gas. Guest bathrooms, basement floor drains, and utility sinks that go unused for weeks are the common culprits.</p>
+      <div class="callout"><strong>// THE FIX</strong>Run water for 30 seconds — refills the trap. For vacation homes or infrequently used drains: pour a tablespoon of cooking oil down the drain. It floats on the water and slows evaporation.</div>
+      <div class="warn-block"><strong>// IF SMELL PERSISTS AFTER RUNNING WATER</strong>The trap may be incorrectly pitched, partially clogged, or vented wrong. A 30-second tap test is diagnostic — if it doesn't clear within a few minutes, something else is the problem.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>A tripped breaker often doesn't snap to OFF. It sticks in the middle and looks like ON.</title>
+      <link>https://v0idl1ne.com/entries#a-tripped-breaker-often-doesn-t-snap-to-off-it-sticks-in-the-middle-and-looks-like-on</link>
+      <guid isPermaLink="false">v0idl1ne-entry-12</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The trip position is slightly off-center — not fully flipped. Pushing toward ON from there does nothing. You have to go fully OFF first, then ON.</description>
+      <content:encoded><![CDATA[<h2>The Trip Position</h2>
+      <p>Breakers have three positions: ON, OFF, and TRIPPED. Tripped looks like ON but is about 10–15 degrees off-center. Most people miss it because they're looking for something obviously flipped to OFF.</p>
+      <div class="callout"><strong>// THE RESET SEQUENCE</strong>1. Unplug or shut off whatever's on that circuit.<br>2. Push the breaker firmly all the way to OFF — feel the click.<br>3. Push it back to ON.<br><br>Going from middle-position directly to ON does nothing. You must pass through OFF.</div>
+      <div class="warn-block"><strong>// IF IT TRIPS AGAIN WITH NOTHING PLUGGED IN</strong>Wiring fault — stop and call an electrician. A breaker that won't hold is telling you something about the load or the wiring.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Caulking over old caulk seals in moisture and makes it fail faster.</title>
+      <link>https://v0idl1ne.com/entries#caulking-over-old-caulk-seals-in-moisture-and-makes-it-fail-faster</link>
+      <guid isPermaLink="false">v0idl1ne-entry-13</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>New caulk on top of old traps water between layers, grows mold behind the wall, and fails as fast as what's underneath. Remove all of it first.</description>
+      <content:encoded><![CDATA[<h2>Why Layering Fails</h2>
+      <p>Caulk bonds to surfaces. Old caulk is no longer bonded — it's cracked and damp underneath. New caulk applied over it bonds to the old layer, not the wall. It will fail as fast as the layer below it, with mold trapped between them.</p>
+      <div class="callout"><strong>// THE RIGHT PROCESS</strong>1. Remove all old caulk — plastic scraper + caulk remover solvent (let soak 2 hours on silicone).<br>2. Clean with rubbing alcohol.<br>3. Dry completely — wait 24 hours after last shower use.<br>4. Apply 100% silicone caulk in one continuous bead.<br>5. Don't use the shower for 24 hours minimum.</div>
+      <div class="warn-block"><strong>// BLACK SUBSTRATE UNDER OLD CAULK</strong>If the grout or substrate underneath is black or soft after removal, you may have mold behind the tile. Don't just re-caulk. That wall needs to be opened.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>5W-30 isn't a name. It's an engineering spec for how your oil behaves.</title>
+      <link>https://v0idl1ne.com/entries#5w-30-isn-t-a-name-it-s-an-engineering-spec-for-how-your-oil-behaves</link>
+      <guid isPermaLink="false">v0idl1ne-entry-14</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The numbers describe cold-flow and hot-flow viscosity. Wrong viscosity increases wear on cold starts. Your manual's spec is not a suggestion.</description>
+      <content:encoded><![CDATA[<h2>What the Numbers Mean</h2>
+      <p>W = Winter. The number before it is cold-flow viscosity. The number after is hot-flow at ~212°F. Cold-start flow matters most — the first seconds after startup account for the majority of engine wear over a vehicle's lifetime.</p>
+      <div class="callout"><strong>// READING THE SPEC</strong>5W-30: flows like 5-weight cold, 30-weight hot.<br>0W-20: thinner cold flow — better cold-start protection, common in newer engines.<br>10W-40: thicker cold start — can restrict flow in critical first seconds.</div>
+      <h2>Use What the Manual Says</h2>
+      <p>Going thicker doesn't give "extra protection" — it restricts flow and increases wear. Going thinner causes oil pressure loss at operating temp. The spec is engineered for your tolerances.</p>
+      <div class="warn-block"><strong>// SYNTHETIC vs CONVENTIONAL</strong>Synthetic has better cold-flow and higher temp stability. For any engine over ~75k miles or in extreme climates, it's worth it. Never mix them — drain and refill if switching.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Smoke alarms expire. Replacing the battery doesn't replace the sensor.</title>
+      <link>https://v0idl1ne.com/entries#smoke-alarms-expire-replacing-the-battery-doesn-t-replace-the-sensor</link>
+      <guid isPermaLink="false">v0idl1ne-entry-15</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The chamber that detects smoke degrades over time. After 10 years it may not alert you in time — or at all. Check the manufacture date on the back.</description>
+      <content:encoded><![CDATA[<h2>What Actually Expires</h2>
+      <p>The sensor — a photoelectric or ionization chamber — degrades through dust and age. A 15-year-old alarm with a fresh battery can fail to detect smoke in time to matter. The manufacture date is stamped on the back of the unit.</p>
+      <div class="callout"><strong>// THE STANDARD</strong>NFPA 72: replace the entire alarm every 10 years from manufacture date — not install date. If the date on the back is older than 10 years, replace it regardless of whether it chirps and responds to the test button.</div>
+      <div class="warn-block"><strong>// SENSOR TYPES MATTER</strong>Ionization: faster on fast-flaming fires. Photoelectric: faster on slow smoldering fires — more common and more deadly in residential settings. NFPA recommends both types or a dual-sensor alarm in each room.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Know where your main water shutoff is before a pipe bursts.</title>
+      <link>https://v0idl1ne.com/entries#know-where-your-main-water-shutoff-is-before-a-pipe-bursts</link>
+      <guid isPermaLink="false">v0idl1ne-entry-16</guid>
+      <category>PLUMBING</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>It's at the meter near the street or where the main line enters the house. You have minutes when a pipe fails. Find it now.</description>
+      <content:encoded><![CDATA[<h2>Two Places to Check</h2>
+      <p>The water meter box (in the ground near the street — lift the lid), and inside the house where the supply line enters — usually in the basement, crawl space, or utility room near the front foundation wall.</p>
+      <div class="callout"><strong>// VALVE TYPES</strong>Ball valve (newer): quarter-turn, 90 degrees. Perpendicular to pipe = OFF. Fast and reliable.<br>Gate valve (older): multi-turn clockwise to close. Sometimes seizes after years of disuse — test it now, not during a flood.</div>
+      <div class="warn-block"><strong>// DO THIS NOW</strong>Find it, test that it actually turns. If it's an old gate valve that hasn't moved in decades, have a plumber replace it with a ball valve. The cost is low. The reliability difference is not.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Popcorn ceilings in pre-1978 homes may contain asbestos. Don't scrape them.</title>
+      <link>https://v0idl1ne.com/entries#popcorn-ceilings-in-pre-1978-homes-may-contain-asbestos-don-t-scrape-them</link>
+      <guid isPermaLink="false">v0idl1ne-entry-17</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The danger isn't having it — it's disturbing it. Sanding or scraping releases fibers. Test first. Kits are $30.</description>
+      <content:encoded><![CDATA[<h2>The Background</h2>
+      <p>Asbestos was commonly added to textured ceiling compounds from the 1950s through the mid-1970s. The EPA banned it in patching compounds in 1977. Pre-1978 textured ceilings: assume present until tested.</p>
+      <div class="callout"><strong>// HOW TO TEST</strong>Mist the area with water first to suppress fiber release. Take a small sample — fingertip-sized — seal it in a plastic bag. Mail-in test kits at hardware stores: ~$30 including lab analysis. Results in a few days.</div>
+      <h2>If It Tests Positive</h2>
+      <p>Intact, undisturbed asbestos is not an immediate hazard. Options: leave it alone, encapsulate with paint, or hire licensed abatement for removal. DIY removal of confirmed asbestos is illegal in most jurisdictions.</p>
+      <div class="warn-block"><strong>// EPA RRP RULE</strong>Contractors are required to test for asbestos and lead before disturbing surfaces in pre-1978 homes. If you're hiring out renovation work, verify they're following this — it's legally required.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Never open a hot radiator cap. The reservoir is where you check coolant.</title>
+      <link>https://v0idl1ne.com/entries#never-open-a-hot-radiator-cap-the-reservoir-is-where-you-check-coolant</link>
+      <guid isPermaLink="false">v0idl1ne-entry-18</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Modern cooling systems are pressurized. A hot radiator cap can spray 200°F coolant. The translucent reservoir near the radiator is your check point.</description>
+      <content:encoded><![CDATA[<h2>How It Works</h2>
+      <p>As coolant heats it expands into the overflow reservoir. When it cools it draws back in. The reservoir — not the radiator — is your check and fill point for normal maintenance.</p>
+      <div class="callout"><strong>// THE RULE</strong>Check the reservoir (marked MIN/MAX) when cold — before driving, not after. Add coolant to the reservoir, not the radiator directly, in normal use.</div>
+      <h2>Consistently Low Reservoir</h2>
+      <p>One low reading can be normal. Consistently losing coolant with no visible leak under the car: internal leak. Most likely head gasket. Signs: white exhaust smoke, milky oil on the dipstick, coolant smell in the cabin.</p>
+      <div class="warn-block"><strong>// IF YOU MUST OPEN A HOT CAP</strong>Drape a thick rag over it, turn slowly to the first stop to release pressure, wait. Even then — don't. There is no scenario where the urgency outweighs the risk of 200°F coolant.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Aluminum wiring in older homes requires CO/ALR-rated outlets. Standard ones are a fire hazard.</title>
+      <link>https://v0idl1ne.com/entries#aluminum-wiring-in-older-homes-requires-co-alr-rated-outlets-standard-ones-are-a-fire-hazard</link>
+      <guid isPermaLink="false">v0idl1ne-entry-19</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Homes built in the 1960s–70s may have aluminum branch wiring. It expands and contracts more than copper, loosening connections over time. The CPSC found 55x higher fire-hazard rates.</description>
+      <content:encoded><![CDATA[<h2>How to Identify It</h2>
+      <p>Aluminum wire is silver-colored (copper is orange-brown). Check your panel — breakers may be labeled "AL." At outlets you may see silver wire instead of copper.</p>
+      <div class="callout"><strong>// THE FIXES</strong>Best option: licensed electrician installs copper pigtails at every connection point using AlumiConn or approved connectors.<br><br>Alternative: replace all outlets and switches with devices marked CO/ALR. Standard residential outlets are not rated for aluminum.</div>
+      <div class="warn-block"><strong>// WHY IT MATTERS</strong>Aluminum expands and contracts more than copper with temperature changes. Years of this causes connections to loosen. Loose connections create resistance, resistance creates heat, heat creates fire — inside walls where no one sees it.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Attic insulation R-values add together. Most homes are way under spec.</title>
+      <link>https://v0idl1ne.com/entries#attic-insulation-r-values-add-together-most-homes-are-way-under-spec</link>
+      <guid isPermaLink="false">v0idl1ne-entry-20</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>You don't remove old insulation to add more — you layer it. Most older homes have R-11 to R-19. The DOE recommends R-38 to R-60.</description>
+      <content:encoded><![CDATA[<h2>R-Values Are Additive</h2>
+      <p>R-value measures resistance to heat flow. R-19 existing plus R-25 new installation equals R-44 total. Blow new insulation over old — no removal required. Blown-in fiberglass or cellulose runs $0.50–$1.50/sq ft installed and is often the highest-ROI improvement in an older home.</p>
+      <div class="callout"><strong>// AIR SEAL FIRST</strong>Before adding insulation, seal air leaks — gaps around plumbing penetrations, electrical boxes, the attic hatch. Air movement through insulation destroys its effectiveness. A sealed R-30 attic outperforms an unsealed R-60.</div>
+      <div class="warn-block"><strong>// THE ATTIC HATCH</strong>Most attic hatches are a direct hole in your thermal envelope — no insulation, no air sealing. Add weatherstripping to the frame and rigid foam board to the hatch door. This one fix is often noticeable in both comfort and energy bills.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>The serpentine belt drives your alternator, AC, power steering, and water pump. One belt.</title>
+      <link>https://v0idl1ne.com/entries#the-serpentine-belt-drives-your-alternator-ac-power-steering-and-water-pump-one-belt</link>
+      <guid isPermaLink="false">v0idl1ne-entry-21</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>When it snaps, everything fails at once. Squealing or visible cracking means replace it before it goes — not after.</description>
+      <content:encoded><![CDATA[<h2>What Fails When It Goes</h2>
+      <p>Alternator dies → battery drains → electrical systems fail. Power steering gone → heavy wheel. Water pump stops → engine overheats in minutes. AC stops — least of your problems at that point.</p>
+      <div class="callout"><strong>// REPLACEMENT INTERVAL</strong>Inspect every oil change. Replace every 60,000–100,000 miles regardless of appearance. Signs it's due: cracks on the ribbed side, fraying edges, glazing, squealing on cold or wet startup.</div>
+      <div class="warn-block"><strong>// COST MATH</strong>Serpentine belt: $25–60 part, 30–60 min labor. Failure on the road: tow + emergency shop rate + possible overheating damage. One of the cheapest preventive replacements on the car.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Tile doesn't waterproof a shower. The grout does — but only if it's sealed.</title>
+      <link>https://v0idl1ne.com/entries#tile-doesn-t-waterproof-a-shower-the-grout-does-but-only-if-it-s-sealed</link>
+      <guid isPermaLink="false">v0idl1ne-entry-22</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Ceramic and porcelain tile is waterproof. Grout is cement-based and porous. Unsealed grout absorbs water every shower and causes mold behind the wall.</description>
+      <content:encoded><![CDATA[<h2>The Simple Test</h2>
+      <p>Drip water on your grout lines. Beads up: sealer is working. Soaks in within a few seconds: grout is unsealed or needs resealing. Reseal every 1–2 years in showers with a penetrating silicone grout sealer — apply, let soak 10 minutes, wipe off excess.</p>
+      <div class="callout"><strong>// NEW TILE INSTALLS</strong>Grout should be sealed 48–72 hours after installation, after it fully cures. Many installers don't do this. If you had tile installed and nobody mentioned sealing — do it yourself. Takes 20 minutes.</div>
+      <div class="warn-block"><strong>// PERMANENTLY DARKENED GROUT</strong>Grout that won't clean back to its original color has absorbed material — the sealer was gone. Sealing now prevents further damage but won't reverse existing discoloration.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Your furnace filter has an arrow on it. It's probably installed backwards.</title>
+      <link>https://v0idl1ne.com/entries#your-furnace-filter-has-an-arrow-on-it-it-s-probably-installed-backwards</link>
+      <guid isPermaLink="false">v0idl1ne-entry-23</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The arrow points toward the furnace — away from the return duct. Backwards installation collapses the filter, cuts airflow, and can crack a heat exchanger over time.</description>
+      <content:encoded><![CDATA[<h2>Which Way It Goes</h2>
+      <p>Air flows from the return duct through the filter and into the furnace. The arrow points in the direction of airflow — toward the furnace. If the arrow is pointing at you when you look into the return side of the filter slot, it's backwards.</p>
+      <div class="callout"><strong>// WHAT BACKWARDS DOES</strong>Negative pressure from the system collapses the filter media against the frame. Restricted airflow makes the system overwork. Heat exchangers can overheat and crack from restricted airflow — a $500–2,000 repair.</div>
+      <div class="warn-block"><strong>// CHANGE INTERVAL</strong>1" filters: every 30–90 days. 4–5" media filters: every 6–12 months. Check monthly, change when gray. A clogged filter costs more in energy than the filter does to replace.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>You can adjust your water heater temperature. Factory default is often wrong.</title>
+      <link>https://v0idl1ne.com/entries#you-can-adjust-your-water-heater-temperature-factory-default-is-often-wrong</link>
+      <guid isPermaLink="false">v0idl1ne-entry-24</guid>
+      <category>PLUMBING</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Most units ship at 120°F but some arrive at 140°F — scalding risk, especially with children. It's a dial behind an access panel.</description>
+      <content:encoded><![CDATA[<h2>Finding the Thermostat</h2>
+      <p>Electric: behind an access panel on the side, held by two screws. May have two thermostats (upper and lower elements) — set both the same. Gas: dial on the gas valve itself, near the bottom front of the unit.</p>
+      <div class="callout"><strong>// TEMPERATURE GUIDE</strong>120°F: EPA recommendation. Kills most bacteria, low scalding risk. Standard.<br>130°F: good compromise if you have a dishwasher without an internal heater.<br>140°F: kills Legionella — use if someone in the household is immunocompromised. Scalding risk increases significantly above 120°F.</div>
+      <div class="warn-block"><strong>// ROTTEN EGG SMELL FROM HOT WATER</strong>Hydrogen sulfide from bacteria reacting with a magnesium anode rod. Raising to 140°F kills bacteria temporarily — the real fix is switching to an aluminum/zinc anode rod. Doesn't mean the heater is failing.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Brake fluid absorbs water over time and loses heat resistance. Flush it every 2 years.</title>
+      <link>https://v0idl1ne.com/entries#brake-fluid-absorbs-water-over-time-and-loses-heat-resistance-flush-it-every-2-years</link>
+      <guid isPermaLink="false">v0idl1ne-entry-25</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Moisture lowers brake fluid's boiling point. During hard braking it can boil, creating vapor pockets — making your pedal go soft when you need it most.</description>
+      <content:encoded><![CDATA[<h2>Why It Degrades</h2>
+      <p>Brake fluid is hygroscopic — it absorbs moisture from air over time. Water in the fluid lowers its boiling point. During prolonged or hard braking, the fluid heats up. If moisture content is high enough, it boils. Vapor compresses; fluid doesn't. Pedal goes soft or to the floor.</p>
+      <div class="callout"><strong>// SERVICE INTERVAL</strong>Most manufacturers: flush every 2 years or 30,000 miles regardless of appearance. Fluid looks clean even when degraded — color is not the indicator. Inexpensive moisture test strips are available at auto parts stores.</div>
+      <div class="warn-block"><strong>// DOT RATINGS ARE NOT INTERCHANGEABLE</strong>DOT 3, 4, and 5.1 are glycol-based — water absorbing. DOT 5 is silicone — does not absorb water, purple in color, not interchangeable with the others. Never mix types.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Running an extension cord under a rug is a fire hazard. The NEC prohibits it.</title>
+      <link>https://v0idl1ne.com/entries#running-an-extension-cord-under-a-rug-is-a-fire-hazard-the-nec-prohibits-it</link>
+      <guid isPermaLink="false">v0idl1ne-entry-26</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The rug hides heat buildup. Foot traffic damages insulation. An undersized cord under load can ignite without ever tripping a breaker.</description>
+      <content:encoded><![CDATA[<h2>Why It's Dangerous</h2>
+      <p>Extension cords generate heat proportional to current load. Rugs trap that heat and hide it. Foot traffic and furniture gradually damage insulation. Breakers protect circuits — not undersized cords. An 18-gauge cord rated 5–7A carrying a 12.5A space heater will heat up without triggering anything.</p>
+      <div class="callout"><strong>// NEC ARTICLE 400</strong>Explicitly prohibits running flexible cords under rugs, through walls, or as a substitute for permanent wiring. This isn't a suggestion — it's code because houses have burned down this way.</div>
+      <div class="warn-block"><strong>// POWER STRIPS ARE NOT PERMANENT SOLUTIONS</strong>Don't daisy-chain them. Don't plug high-draw appliances into a power strip — space heaters, refrigerators, microwaves. They need dedicated circuits or direct wall outlets.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Most paint failures are surface prep failures. The paint is fine.</title>
+      <link>https://v0idl1ne.com/entries#most-paint-failures-are-surface-prep-failures-the-paint-is-fine</link>
+      <guid isPermaLink="false">v0idl1ne-entry-27</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Paint peeling within a year means the surface was dirty, glossy, or wet. A $10 primer coat beats a $60 premium paint on bad prep every time.</description>
+      <content:encoded><![CDATA[<h2>What Paint Actually Needs</h2>
+      <p>Paint bonds through mechanical adhesion. The surface must be: clean (no oil, dust, soap), dry, and dull (not glossy). Miss any of those and it will peel — sometimes immediately, sometimes in six months.</p>
+      <div class="callout"><strong>// THE PREP SEQUENCE</strong>1. Wash with TSP substitute or sugar soap. Let dry completely.<br>2. Scuff any glossy surfaces with 120-grit — break the shine, don't sand through.<br>3. Prime bare drywall, repaired spots, and stained areas.<br>4. Then paint.</div>
+      <div class="warn-block"><strong>// GLOSSY SURFACES</strong>High-gloss and semi-gloss must be scuffed or a bonding primer applied before repainting. Paint over gloss without prep will peel in sheets. Deglosser liquid is an alternative to sanding on large areas.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>A running toilet can waste 200 gallons a day and cost $200/month. The fix is $7.</title>
+      <link>https://v0idl1ne.com/entries#a-running-toilet-can-waste-200-gallons-a-day-and-cost-200-month-the-fix-is-7</link>
+      <guid isPermaLink="false">v0idl1ne-entry-28</guid>
+      <category>PLUMBING</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>If you hear it refilling when no one flushed, it's running. Usually a failed flapper. Food coloring in the tank confirms it in 15 minutes.</description>
+      <content:encoded><![CDATA[<h2>Diagnose First</h2>
+      <p>Food coloring in the tank (not bowl), don't flush, wait 15 minutes. Color in the bowl = flapper leak. Water running into the overflow tube (tall tube in center of tank) = float set too high.</p>
+      <div class="callout"><strong>// FLAPPER FIX</strong>1. Shut supply valve behind/under toilet. Flush to empty tank.<br>2. Unhook chain from flush arm. Slide flapper off the two ears on flush valve.<br>3. Match the size at the hardware store (2" standard, 3" for newer toilets).<br>4. Snap in, reconnect chain with ¼" slack. Turn water on, test.</div>
+      <div class="warn-block"><strong>// COST REALITY</strong>At average US water rates: $70–200/month in wasted water. Replacement flapper: $5–10. One of the highest-ROI fixes in a home.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>You can legally replace two-prong outlets with three-prong GFCI outlets. No ground wire needed.</title>
+      <link>https://v0idl1ne.com/entries#you-can-legally-replace-two-prong-outlets-with-three-prong-gfci-outlets-no-ground-wire-needed</link>
+      <guid isPermaLink="false">v0idl1ne-entry-29</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>The NEC allows it. GFCI protection is equivalent to grounding for shock protection. The 'No Equipment Ground' stickers come in the box.</description>
+      <content:encoded><![CDATA[<h2>Why It's Legal</h2>
+      <p>Grounding provides a low-resistance fault current path. GFCI detects current imbalance and cuts power in milliseconds — equivalent shock protection. NEC Article 406.4(D) explicitly permits this for retrofit situations.</p>
+      <div class="callout"><strong>// THE METHOD</strong>1. Replace two-prong outlet with GFCI outlet.<br>2. Apply "No Equipment Ground" label (included in box).<br>3. Label any standard outlets protected downstream by this GFCI.<br>4. Leave the ground screw empty — do NOT connect it.</div>
+      <div class="warn-block"><strong>// WHAT'S NOT LEGAL</strong>Replacing two-prong with standard three-prong without adding a real ground. The outlet accepts the plug but the ground pin connects to nothing — false safety. GFCI is the only compliant option without running new ground wire.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Windshield washer fluid and water are not interchangeable.</title>
+      <link>https://v0idl1ne.com/entries#windshield-washer-fluid-and-water-are-not-interchangeable</link>
+      <guid isPermaLink="false">v0idl1ne-entry-30</guid>
+      <category>AUTOMOTIVE</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Water freezes solid, leaves mineral deposits, and can culture Legionella bacteria. Washer fluid has antifreeze, detergents, and costs $4. Use it.</description>
+      <content:encoded><![CDATA[<h2>What Water Does to the System</h2>
+      <p>Freezes at 32°F — cracks the plastic reservoir and potentially the pump and lines. Leaves mineral deposits on the windshield over time. Standing water in warm conditions can culture Legionella, which gets aerosolized when you spray while driving with windows down.</p>
+      <div class="callout"><strong>// WHAT FLUID CONTAINS</strong>Methanol or ethylene glycol (freeze protection to -20°F or lower)<br>Detergents that cut road film, oil, and bug splatter<br>Anti-bacterial agents in some formulations<br><br>Cost: $3–5/gallon.</div>
+      <div class="warn-block"><strong>// DON'T USE HOUSEHOLD CLEANERS</strong>Windex, dish soap — they foam in the reservoir, damage pump seals, and leave residue on the windshield. Washer fluid only.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Drywall screws and wood screws are not the same. Using the wrong one causes failures.</title>
+      <link>https://v0idl1ne.com/entries#drywall-screws-and-wood-screws-are-not-the-same-using-the-wrong-one-causes-failures</link>
+      <guid isPermaLink="false">v0idl1ne-entry-31</guid>
+      <category>HOME</category>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Drywall screws are brittle with no shear strength. In structural wood applications they snap under load without warning. The price difference is negligible.</description>
+      <content:encoded><![CDATA[<h2>The Difference</h2>
+      <p>Drywall screws: bugle head, coarse thread, hardened brittle steel. Designed for one thing — attaching drywall to studs. No shear or tension rating for wood.</p>
+      <div class="callout"><strong>// USE CASE BREAKDOWN</strong>Drywall screws: drywall only.<br>Wood screws: cabinet assembly, furniture, general wood fastening.<br>Deck screws: exterior and structural wood, corrosion-resistant.<br>Lag screws: heavy structural connections — ledger boards, beam connections.</div>
+      <div class="warn-block"><strong>// HOW TO TELL THEM APART</strong>Drywall screws: black phosphate coated, bugle head, fully threaded. Wood screws: silver or yellow, partially threaded shank, tapered point. When in doubt: the box will say what it's rated for.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ribbed = neutral. Smooth = hot. Know this before you touch a wire.</title>
+      <link>https://v0idl1ne.com/entries#ribbed-neutral-smooth-hot-know-this-before-you-touch-a-wire</link>
+      <guid isPermaLink="false">v0idl1ne-entry-0</guid>
+      <category>ELECTRICAL</category>
+      <pubDate>Sun, 06 Apr 2025 12:00:00 GMT</pubDate>
+      <description>On a standard lamp cord, the ribbed wire is the neutral and the smooth wire is hot. Wire it backwards and the socket shell sits at line voltage every time you change a bulb.</description>
+      <content:encoded><![CDATA[<h2>The Basics Nobody Told You</h2>
+      <p>When you're dealing with a standard two-conductor lamp cord (SPT-2 or similar), the two wires look almost identical — except one has a ridged/ribbed texture and one is smooth. That's not a manufacturing quirk. That's a code-required safety marking.</p>
+      <div class="callout"><strong>// THE RULE</strong>RIBBED = NEUTRAL (white in standard wiring) — connects to the WIDE prong<br>SMOOTH = HOT (black in standard wiring) — connects to the NARROW prong<br>Green or bare = GROUND (not always present in lamp cord)</div>
+      <h2>Why It Matters</h2>
+      <p>Wire a lamp socket backwards and the socket shell stays energized even when the switch is off. Touch the shell while swapping a bulb and you're completing a circuit through your body. The bulb works either way — you'd never know it was wrong.</p>
+      <p>Neutral goes to the <code>silver screw</code>, hot to the <code>brass/gold screw</code>. Mnemonic: Ribbed → Right → White → Neutral. Smooth → Small prong → Hot.</p>
+      <div class="warn-block"><strong>// HEADS UP</strong>This only applies to polarized cords. A polarized plug has one blade wider than the other — wider is neutral, narrow is hot. Non-polarized plugs (same blade width) mean the cord has no defined polarity; don't rewire those lamp sockets.</div>
+      <h2>Where This Comes Up</h2>
+      <p>Rewiring a lamp. Replacing a socket. Extending a cord. A non-contact voltage tester costs $15. Get one. But when you can't test, read the wire.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>You have the right to record police in public. In all 50 states.</title>
+      <link>https://v0idl1ne.com/entries#you-have-the-right-to-record-police-in-public-in-all-50-states</link>
+      <guid isPermaLink="false">v0idl1ne-entry-1</guid>
+      <category>LEGAL</category>
+      <pubDate>Sat, 05 Apr 2025 12:00:00 GMT</pubDate>
+      <description>Filming law enforcement in a public space is constitutionally protected. They cannot legally order you to stop. Upheld in every federal circuit court that has addressed it.</description>
+      <content:encoded><![CDATA[<h2>The Legal Foundation</h2>
+      <p>The First Amendment protects the right to gather information about government officials performing their duties in public. Every federal circuit court that has addressed this has held that filming police in public is a protected constitutional right.</p>
+      <div class="callout"><strong>// THE RIGHT</strong>You may film police in any public space where you are legally allowed to be. You may not be ordered to stop simply because you are filming. Officers cannot legally seize or destroy your phone.</div>
+      <h2>What They Can and Cannot Do</h2>
+      <p>Police can order you to move if you are physically obstructing their work. "Step back" is legal. "Stop recording" is not, in public.</p>
+      <p><em>Riley v. California</em> (2014) — unanimous Supreme Court — held that police need a warrant to search a phone's digital contents. You do not have to unlock it.</p>
+      <div class="warn-block"><strong>// KNOW THE LIMITS</strong>Some states have two-party consent laws for audio. These typically apply to private conversations, not police acting in official capacity in public — but know your state.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>You can decline any medical procedure. Even in an emergency room.</title>
+      <link>https://v0idl1ne.com/entries#you-can-decline-any-medical-procedure-even-in-an-emergency-room</link>
+      <guid isPermaLink="false">v0idl1ne-entry-2</guid>
+      <category>HEALTH</category>
+      <pubDate>Fri, 04 Apr 2025 12:00:00 GMT</pubDate>
+      <description>Informed consent is a legal right. You can say no to any treatment, test, or medication — even if a doctor says you need it. Even if you're in a hospital bed.</description>
+      <content:encoded><![CDATA[<h2>What Informed Consent Actually Means</h2>
+      <p>Every competent adult has the legal right to refuse medical treatment — including life-saving treatment. Grounded in bodily autonomy, recognized across U.S. law and international standards.</p>
+      <div class="callout"><strong>// THE RIGHT</strong>You can refuse any treatment at any time, for any reason. Signing an intake form is not blanket consent to everything they want to do.</div>
+      <h2>What Informed Actually Requires</h2>
+      <p>Before consent is valid, a provider must explain: what the procedure is, the risks, the alternatives, and what happens if you do nothing. If they haven't done that, consent hasn't legally happened.</p>
+      <p>You are allowed to ask: <code>What are my alternatives?</code> <code>What happens if I don't?</code> Those are your legal right, not difficult-patient questions.</p>
+      <div class="warn-block"><strong>// EXCEPTIONS</strong>If you are unconscious, severely incapacitated, or a minor without a parent present, different rules apply. Once awake and coherent, your right to refuse returns.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Your water heater has a sacrificial anode rod. Replace it or pay later.</title>
+      <link>https://v0idl1ne.com/entries#your-water-heater-has-a-sacrificial-anode-rod-replace-it-or-pay-later</link>
+      <guid isPermaLink="false">v0idl1ne-entry-3</guid>
+      <category>HOME</category>
+      <pubDate>Thu, 03 Apr 2025 12:00:00 GMT</pubDate>
+      <description>There's a magnesium rod inside your water heater that corrodes so the tank doesn't. Most people never touch it. That's why water heaters fail early.</description>
+      <content:encoded><![CDATA[<h2>What It Is</h2>
+      <p>Inside every conventional tank water heater is a long metal rod — typically magnesium or aluminum — that corrodes through electrochemical action, drawing corrosive minerals away from the steel tank walls.</p>
+      <div class="callout"><strong>// THE MATH</strong>Lifespan (rod never replaced): 8–12 years.<br>Lifespan (rod replaced every 3–5 years): 20+ years.<br>New rod: $20–$50. New heater: $500–$1,500+.</div>
+      <h2>How To Check It</h2>
+      <p>Cut power/gas and cold water supply. Find the hex bolt on top — use a <code>1-1/16" socket</code> and breaker bar. If it's thin, corroded to the wire core, or less than half original diameter, replace it.</p>
+      <div class="warn-block"><strong>// WATCH FOR</strong>Rotten egg smell from hot water = hydrogen sulfide from bacteria reacting with a magnesium rod. Switch to aluminum/zinc. The smell doesn't mean the heater is bad.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Medical debt under $500 cannot appear on your credit report.</title>
+      <link>https://v0idl1ne.com/entries#medical-debt-under-500-cannot-appear-on-your-credit-report</link>
+      <guid isPermaLink="false">v0idl1ne-entry-4</guid>
+      <category>FINANCE</category>
+      <pubDate>Wed, 02 Apr 2025 12:00:00 GMT</pubDate>
+      <description>As of 2023, all three major bureaus removed medical debt under $500. Paid medical debt is also gone. Most people don't know this already happened.</description>
+      <content:encoded><![CDATA[<h2>What Changed</h2>
+      <p>In 2022–2023, Equifax, Experian, and TransUnion overhauled medical debt reporting in response to CFPB pressure and recognition that medical debt is a poor predictor of creditworthiness.</p>
+      <div class="callout"><strong>// THE CHANGES (2023)</strong>Medical debt under $500 removed from all three major reports.<br>Paid medical debt removed (previously stayed 7 years).<br>Unpaid debt reporting window extended from 6 months to 1 year.</div>
+      <h2>What This Means For You</h2>
+      <p>Paid medical collections on your report? Dispute them — they should be gone. Pull your reports free at <code>AnnualCreditReport.com</code> — the only federally authorized source.</p>
+      <div class="warn-block"><strong>// NOT FIXED YET</strong>A formal rule banning all medical debt from reports has been proposed but not finalized as of early 2025. Current changes are bureau policy, not law. Document disputes and get written confirmation.</div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Cold water is more dangerous than cold air. Here's why.</title>
+      <link>https://v0idl1ne.com/entries#cold-water-is-more-dangerous-than-cold-air-here-s-why</link>
+      <guid isPermaLink="false">v0idl1ne-entry-5</guid>
+      <category>SURVIVAL</category>
+      <pubDate>Tue, 01 Apr 2025 12:00:00 GMT</pubDate>
+      <description>Water conducts heat 25x faster than air. Most cold water deaths happen before the person ever goes under — not from drowning, but from cold shock and muscle failure.</description>
+      <content:encoded><![CDATA[<h2>The Timeline Nobody Knows</h2>
+      <p>Cold water kills through a predictable sequence. By the time hypothermia is a factor, you've already survived the parts that kill most people.</p>
+      <div class="callout"><strong>// THE 1-10-1 PRINCIPLE</strong>1 minute: Cold shock — gasping, hyperventilation. Control your breathing. Most deaths happen here.<br><br>10 minutes: Swimming failure — muscles useless. Get horizontal. Float. Get on something.<br><br>1 hour: Unconsciousness from hypothermia. This is when drowning happens.</div>
+      <h2>What To Do</h2>
+      <p>Don't thrash — it accelerates heat loss. Don't swim aggressively unless shore is within 30–50 yards. Float on your back and control your breathing.</p>
+      <div class="warn-block"><strong>// CRITICAL: AFTERDROP</strong>Core temperature continues dropping after removal from cold water as cold blood recirculates from extremities. Can cause cardiac arrest 30+ minutes after rescue. Keep them horizontal, keep them warm, get EMS.</div>]]></content:encoded>
+    </item>
+  </channel>
+</rss>
